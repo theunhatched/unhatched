@@ -20,3 +20,10 @@ erl_crash.dump
 *.ez
 
 .elixir_ls/
+
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
