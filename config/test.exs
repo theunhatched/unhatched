@@ -1,5 +1,7 @@
 use Mix.Config
 
+IO.puts("CONFIGURED WITH #{__ENV__.file}")
+
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
 config :unhatched_web, UnhatchedWeb.Endpoint,

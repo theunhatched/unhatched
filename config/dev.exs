@@ -1,5 +1,7 @@
 use Mix.Config
 
+IO.puts("CONFIGURED WITH #{__ENV__.file}")
+
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #

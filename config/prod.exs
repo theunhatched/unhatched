@@ -1,5 +1,7 @@
 use Mix.Config
 
+IO.puts("Using #{__ENV__.file}")
+
 # For production, don't forget to configure the url host
 # to something meaningful, Phoenix uses this information
 # when generating URLs.
