@@ -1,4 +1,4 @@
-FROM elixir:1.10.2-alpine as build
+FROM elixir:1.9.1-alpine as build
 
 ENV MIX_ENV=prod
 
@@ -25,7 +25,7 @@ RUN cd apps/unhatched_web && mix phx.digest
 
 RUN mix release
 
-FROM elixir:1.10.2-alpine
+FROM elixir:1.9.1-alpine
 
 RUN addgroup -S release && \
     adduser -S -G release release && \

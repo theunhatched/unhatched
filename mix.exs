@@ -7,7 +7,7 @@ defmodule Unhatched.Umbrella.MixProject do
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       version: "0.1.0",
-      elixir: "~> 1.10",
+      elixir: "~> 1.9",
       releases: [
         unhatched_umbrella: [
           applications: [
