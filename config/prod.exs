@@ -10,7 +10,10 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :unhatched_web, UnhatchedWeb.Endpoint,
-  url: [host: System.get_env("APP_HOSTNAME") || "localhost", port: 80],
+  url: [
+    host: System.get_env("APP_HOSTNAME") || "localhost",
+    port: System.get_env("PORT") || 4000
+  ],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # ## SSL Support
