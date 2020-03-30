@@ -19,6 +19,7 @@ RUN mix deps.compile
 
 COPY . .
 
+RUN npm install --prefix apps/unhatched_web/assets
 RUN npm run deploy --prefix apps/unhatched_web/assets
 RUN cd apps/unhatched_web && mix phx.digest
 
