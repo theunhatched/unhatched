@@ -2,7 +2,6 @@ version: 2.1
 
 orbs:
   aws-ecr: circleci/aws-ecr@6.7.1
-  aws-ecs: circleci/aws-ecs@1.1.0
 
 workflows:
   build-and-deploy:
@@ -14,10 +13,3 @@ workflows:
           region: AWS_REGION
           repo: "blastocyst"
           tag: "latest,${CIRCLE_SHA1}"
-      # - aws-ecs/deploy-service-update:
-      #     requires:
-      #       - aws-ecr/build-and-push-image
-      #     family: "blastocyst-task"
-      #     cluster-name: "blastocyst-cluster"
-      #     service-name: "blastocyst-service"
-      #     container-image-name-updates: "container=blastocyst-container,tag=latest"
