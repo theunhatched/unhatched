@@ -8,17 +8,16 @@ workflows:
   build-and-deploy:
     jobs:
       - aws-ecr/build-and-push-image:
-        account-url: AWS_ECR_ACCOUNT_URL
-        aws-access-key-id: AWS_ACCESS_KEY_ID
-        aws-secret-access-key: AWS_SECRET_ACCESS_KEY
-        path: ./
-        region: AWS_REGION
-        repo: "blastocyst"
-        tag: "latest,${CIRCLE_SHA1}"
+          account-url: AWS_ECR_ACCOUNT_URL
+          aws-access-key-id: AWS_ACCESS_KEY_ID
+          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
+          region: AWS_REGION
+          repo: "blastocyst"
+          tag: "latest,${CIRCLE_SHA1}"
       - aws-ecs/deploy-service-update:
-        requires:
-          - aws-ecr/build-and-push-image
-        family: "blastocyst-task"
-        cluster-name: "blastocyst-cluster"
-        service-name: "blastocyst-service"
-        container-image-name-updates: "container=blastocyst-container,tag=latest"
+          requires:
+            - aws-ecr/build-and-push-image
+          family: "blastocyst-task"
+          cluster-name: "blastocyst-cluster"
+          service-name: "blastocyst-service"
+          container-image-name-updates: "container=blastocyst-container,tag=latest"
