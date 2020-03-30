@@ -12,6 +12,14 @@ locals {
   aws_ecs_execution_role_name = "${var.aws_resource_prefix}-ecs-execution-role"
 }
 
+# ECR
+
 resource "aws_ecr_repository" "blastocyst" {
   name = local.aws_ecr_repository_name
 }
+
+# TODO:
+
+# ECS
+
+# Load balancer
