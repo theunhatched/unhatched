@@ -1,3 +1,3 @@
-variable "region" {
-  default = "us-east-1"
-}
+variable "region" {}
+
+variable "aws_resource_prefix" {}
