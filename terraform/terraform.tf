@@ -18,6 +18,8 @@ resource "aws_ecr_repository" "blastocyst" {
   name = local.aws_ecr_repository_name
 }
 
+# Codecommit
+
 # TODO:
 
 # ECS
