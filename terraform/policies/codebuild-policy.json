@@ -67,7 +67,8 @@
         "${cw_logs_group}",
         "${cw_logs_group}:*",
         "arn:aws:s3:::codepipeline-${region}-*",
-        "arn:aws:s3:::terraform-*"
+        "arn:aws:s3:::terraform-*",
+        "${artifact_bucket}"
       ]
     },
     {

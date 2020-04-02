@@ -51,6 +51,17 @@
         "ecr:DescribeImages"
       ],
       "Resource": "*"
+    },
+    {
+      "Action": [
+        "codecommit:CancelUploadArchive",
+        "codecommit:GetBranch",
+        "codecommit:GetCommit",
+        "codecommit:GetUploadArchiveStatus",
+        "codecommit:UploadArchive"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
     }
   ],
   "Version": "2012-10-17"

@@ -1,8 +1,3 @@
-resource "aws_s3_bucket" "amnion" {
-  bucket = "unhatched-amnion"
-  acl    = "private"
-}
-
 resource "aws_cloudwatch_log_group" "codebuild_logs" {
   name              = "/amnion/codebuild"
   retention_in_days = 7
@@ -15,8 +10,14 @@ resource "aws_codebuild_source_credential" "_" {
 }
 
 resource "aws_s3_bucket" "codepipeline_bucket" {
+  bucket        = "unhatched-amnion"
   acl           = "private"
   force_destroy = true
+}
+
+resource "aws_codecommit_repository" "amnion" {
+  repository_name = "unhatched"
+  description     = "Unhatched Source"
 }
 
 resource "aws_codebuild_project" "amnion" {
@@ -77,16 +78,14 @@ resource "aws_codepipeline" "codepipeline" {
     action {
       name             = "Source"
       category         = "Source"
-      owner            = "ThirdParty"
-      provider         = "GitHub"
+      owner            = "AWS"
+      provider         = "CodeCommit"
       version          = "1"
       output_artifacts = ["source_output"]
 
       configuration = {
-        Owner      = "philihp"
-        Repo       = "unhatched"
-        Branch     = "master"
-        OAuthToken = "${var.github_token}"
+        RepositoryName = "unhatched"
+        BranchName     = "master"
       }
     }
   }

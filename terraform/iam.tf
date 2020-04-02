@@ -14,6 +14,7 @@ data "template_file" "codebuild_service_role_policy" {
     private_subnet_1 = "${module.vpc.private_subnets[0]}"
     private_subnet_2 = "${module.vpc.private_subnets[1]}"
     private_subnet_3 = "${module.vpc.private_subnets[2]}"
+    artifact_bucket  = "${aws_s3_bucket.codepipeline_bucket.arn}"
   }
 }
 

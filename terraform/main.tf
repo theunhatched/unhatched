@@ -10,11 +10,6 @@ locals {
   aws_ecs_execution_role_name = "${var.aws_resource_prefix}-ecs-execution-role"
 }
 
-provider "aws" {
-  version = "~> 2.55"
-  profile = "default"
-  region  = "us-east-1"
-}
 data "aws_region" "current_region" {}
 
 data "aws_caller_identity" "current" {}
