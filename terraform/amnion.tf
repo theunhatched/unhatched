@@ -20,13 +20,12 @@ resource "aws_s3_bucket" "codepipeline_bucket" {
 }
 
 resource "aws_codebuild_project" "amnion" {
-  name          = "amnion-project"
-  description   = "CodeBuild project for amnion app"
-  service_role  = "${aws_iam_role.codebuild_role.arn}"
-  badge_enabled = true
+  name         = "amnion-project"
+  description  = "CodeBuild project for amnion app"
+  service_role = "${aws_iam_role.codebuild_role.arn}"
 
   artifacts {
-    type = "NO_ARTIFACTS"
+    type = "CODEPIPELINE"
   }
 
   cache {
@@ -51,20 +50,81 @@ resource "aws_codebuild_project" "amnion" {
   }
 
   source {
-    type     = "GITHUB"
-    location = "https://github.com/philihp/unhatched.git"
-    auth {
-      type     = "OAUTH"
-      resource = aws_codebuild_source_credential._.arn
-    }
+    type = "CODEPIPELINE"
   }
 
   vpc_config {
-    vpc_id  = module.vpc.vpc_id
-    subnets = module.vpc.private_subnets
+    vpc_id  = "${module.vpc.vpc_id}"
+    subnets = "${module.vpc.private_subnets}"
     security_group_ids = [
-      module.vpc.default_security_group_id
+      "${module.vpc.default_security_group_id}"
     ]
   }
 
+}
+
+resource "aws_codepipeline" "codepipeline" {
+  name     = "amnion-pipeline"
+  role_arn = "${aws_iam_role.codepipeline_role.arn}"
+
+  artifact_store {
+    location = "${aws_s3_bucket.codepipeline_bucket.bucket}"
+    type     = "S3"
+  }
+
+  stage {
+    name = "Source"
+    action {
+      name             = "Source"
+      category         = "Source"
+      owner            = "ThirdParty"
+      provider         = "GitHub"
+      version          = "1"
+      output_artifacts = ["source_output"]
+
+      configuration = {
+        Owner      = "philihp"
+        Repo       = "unhatched"
+        Branch     = "master"
+        OAuthToken = "${var.github_token}"
+      }
+    }
+  }
+
+  stage {
+    name = "Build"
+    action {
+      name             = "Build"
+      category         = "Build"
+      owner            = "AWS"
+      provider         = "CodeBuild"
+      input_artifacts  = ["source_output"]
+      output_artifacts = ["build_output"]
+      version          = "1"
+      configuration = {
+        ProjectName = "amnion-project"
+      }
+    }
+  }
+
+  # stage {
+  #   name = "Deploy"
+
+  #   action {
+  #     name            = "Deploy"
+  #     category        = "Deploy"
+  #     owner           = "AWS"
+  #     provider        = "CloudFormation"
+  #     input_artifacts = ["build_output"]
+  #     version         = "1"
+
+  #     configuration = {
+  #       ActionMode     = "REPLACE_ON_FAILURE"
+  #       Capabilities   = "CAPABILITY_AUTO_EXPAND,CAPABILITY_IAM"
+  #       OutputFileName = "CreateStackOutput.json"
+  #       StackName      = "MyStack"
+  #       TemplatePath   = "build_output::sam-templated.yaml"
+  #     }
+  #   }
+  # }
 }
