@@ -57,22 +57,12 @@ resource "aws_codebuild_project" "amnion" {
   source {
     type = "CODEPIPELINE"
   }
-
-  # vpc_config {
-  #   vpc_id  = "${module.vpc.vpc_id}"
-  #   subnets = "${module.vpc.private_subnets}"
-  #   security_group_ids = [
-  #     "${module.vpc.default_security_group_id}"
-  #   ]
-  # }
-
 }
 
-# Encryption key for build artifacts
-# resource "aws_kms_key" "artifact_encryption_key" {
-#   description             = "artifact-encryption-key"
-#   deletion_window_in_days = 10
-# }
+resource "aws_kms_key" "artifact_encryption_key" {
+  description             = "artifact-encryption-key"
+  deletion_window_in_days = 10
+}
 
 resource "aws_codepipeline" "codepipeline" {
   name     = "amnion-pipeline"
@@ -81,10 +71,10 @@ resource "aws_codepipeline" "codepipeline" {
   artifact_store {
     location = "${aws_s3_bucket.codepipeline_bucket.bucket}"
     type     = "S3"
-    # encryption_key {
-    #   id   = "${aws_kms_key.artifact_encryption_key.arn}"
-    #   type = "KMS"
-    # }
+    encryption_key {
+      id   = "${aws_kms_key.artifact_encryption_key.arn}"
+      type = "KMS"
+    }
   }
 
   stage {
