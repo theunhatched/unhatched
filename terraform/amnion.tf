@@ -10,7 +10,7 @@ resource "aws_codebuild_source_credential" "_" {
 }
 
 resource "aws_s3_bucket" "codepipeline_bucket" {
-  bucket        = "unhatched-amnion"
+  bucket        = "amnion-artifacts"
   acl           = "private"
   force_destroy = true
 }
@@ -52,10 +52,6 @@ resource "aws_codebuild_project" "amnion" {
     environment_variable {
       name  = "IMAGE_REPO_NAME"
       value = "${local.aws_ecr_repository_name}"
-    }
-    environment_variable {
-      name  = "AWS_ACCOUNT_ID"
-      value = "${data.aws_caller_identity.current.account_id}"
     }
   }
 

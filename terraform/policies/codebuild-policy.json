@@ -68,13 +68,9 @@
         "${cw_logs_group}:*",
         "arn:aws:s3:::codepipeline-${region}-*",
         "arn:aws:s3:::terraform-*",
+        "arn:aws:s3:::amnion-artifacts",
         "${artifact_bucket}"
       ]
-    },
-    {
-      "Effect": "Allow",
-      "Action": "s3:*",
-      "Resource": "*"
     },
     {
       "Effect": "Allow",

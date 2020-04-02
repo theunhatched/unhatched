@@ -36,6 +36,7 @@ data "template_file" "codepipeline_policy" {
 
   vars = {
     artifact_bucket = "${aws_s3_bucket.codepipeline_bucket.arn}"
+    region          = "us-east-1"
   }
 }
 
