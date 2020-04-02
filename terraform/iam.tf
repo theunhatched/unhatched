@@ -3,7 +3,7 @@ resource "aws_iam_role" "codebuild_role" {
   assume_role_policy = "${file("${path.module}/policies/codebuild-assume-role-policy.json")}"
 }
 
-data "template_file" "codebuild_service_role_policy" {
+data "template_file" "codebuild_policy" {
   template = "${file("${path.module}/policies/codebuild-policy.json")}"
 
   vars = {
@@ -18,10 +18,10 @@ data "template_file" "codebuild_service_role_policy" {
   }
 }
 
-resource "aws_iam_role_policy" "codebuild_service_role_policy" {
+resource "aws_iam_role_policy" "codebuild_policy" {
   name   = "amnion_codebuild_policy"
   role   = "${aws_iam_role.codebuild_role.id}"
-  policy = "${data.template_file.codebuild_service_role_policy.rendered}"
+  policy = "${data.template_file.codebuild_policy.rendered}"
 }
 
 #Role assumed by the CodePipeline project
@@ -30,8 +30,17 @@ resource "aws_iam_role" "codepipeline_role" {
   assume_role_policy = "${file("${path.module}/policies/codepipeline-assume-role-policy.json")}"
 }
 
-resource "aws_iam_role_policy" "codepipeline_service_role_policy" {
+
+data "template_file" "codepipeline_policy" {
+  template = "${file("${path.module}/policies/codepipeline-policy.json")}"
+
+  vars = {
+    artifact_bucket = "${aws_s3_bucket.codepipeline_bucket.arn}"
+  }
+}
+
+resource "aws_iam_role_policy" "codepipeline_policy" {
   name   = "amnion_codepipeline_policy"
   role   = "${aws_iam_role.codepipeline_role.id}"
-  policy = "${file("${path.module}/policies/codepipeline-policy.json")}"
+  policy = "${data.template_file.codepipeline_policy.rendered}"
 }

@@ -15,6 +15,10 @@ resource "aws_s3_bucket" "codepipeline_bucket" {
   force_destroy = true
 }
 
+output "codepipeline_bucket" {
+  value = "${aws_s3_bucket.codepipeline_bucket.arn}"
+}
+
 resource "aws_codecommit_repository" "amnion" {
   repository_name = "unhatched"
   description     = "Unhatched Source"
@@ -54,15 +58,21 @@ resource "aws_codebuild_project" "amnion" {
     type = "CODEPIPELINE"
   }
 
-  vpc_config {
-    vpc_id  = "${module.vpc.vpc_id}"
-    subnets = "${module.vpc.private_subnets}"
-    security_group_ids = [
-      "${module.vpc.default_security_group_id}"
-    ]
-  }
+  # vpc_config {
+  #   vpc_id  = "${module.vpc.vpc_id}"
+  #   subnets = "${module.vpc.private_subnets}"
+  #   security_group_ids = [
+  #     "${module.vpc.default_security_group_id}"
+  #   ]
+  # }
 
 }
+
+# Encryption key for build artifacts
+# resource "aws_kms_key" "artifact_encryption_key" {
+#   description             = "artifact-encryption-key"
+#   deletion_window_in_days = 10
+# }
 
 resource "aws_codepipeline" "codepipeline" {
   name     = "amnion-pipeline"
@@ -71,6 +81,10 @@ resource "aws_codepipeline" "codepipeline" {
   artifact_store {
     location = "${aws_s3_bucket.codepipeline_bucket.bucket}"
     type     = "S3"
+    # encryption_key {
+    #   id   = "${aws_kms_key.artifact_encryption_key.arn}"
+    #   type = "KMS"
+    # }
   }
 
   stage {
