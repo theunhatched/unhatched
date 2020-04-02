@@ -5,6 +5,9 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - $(aws ecr get-login --no-include-email --region us-east-1)
+      - echo IMAGE_REPO_NAME=$IMAGE_REPO_NAME
+      - echo CODEBUILD_SOURCE_VERSION=$CODEBUILD_SOURCE_VERSION
+      - echo AWS_ACCOUNT_ID=$AWS_ACCOUNT_ID
   build:
     commands:
       - echo Build started on `date`
