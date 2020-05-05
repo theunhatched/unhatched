@@ -1,4 +1,4 @@
-defmodule UnhatchedWeb.Application do
+defmodule Unhatched.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -7,17 +7,21 @@ defmodule UnhatchedWeb.Application do
 
   def start(_type, _args) do
     children = [
+      # Start the Ecto repository
+      Unhatched.Repo,
       # Start the Telemetry supervisor
       UnhatchedWeb.Telemetry,
+      # Start the PubSub system
+      {Phoenix.PubSub, name: Unhatched.PubSub},
       # Start the Endpoint (http/https)
       UnhatchedWeb.Endpoint
-      # Start a worker by calling: UnhatchedWeb.Worker.start_link(arg)
-      # {UnhatchedWeb.Worker, arg}
+      # Start a worker by calling: Unhatched.Worker.start_link(arg)
+      # {Unhatched.Worker, arg}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: UnhatchedWeb.Supervisor]
+    opts = [strategy: :one_for_one, name: Unhatched.Supervisor]
     Supervisor.start_link(children, opts)
   end
 

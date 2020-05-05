@@ -1,13 +1,13 @@
 defmodule UnhatchedWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :unhatched_web
+  use Phoenix.Endpoint, otp_app: :unhatched
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_unhatched_web_key",
-    signing_salt: "EmjVFbBG"
+    key: "_unhatched_key",
+    signing_salt: "61Sz0dyO"
   ]
 
   socket "/socket", UnhatchedWeb.UserSocket,
@@ -22,7 +22,7 @@ defmodule UnhatchedWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :unhatched_web,
+    from: :unhatched,
     gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
@@ -32,7 +32,7 @@ defmodule UnhatchedWeb.Endpoint do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :unhatched_web
+    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :unhatched
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,

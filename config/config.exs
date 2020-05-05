@@ -1,29 +1,22 @@
-# This file is responsible for configuring your umbrella
-# and **all applications** and their dependencies with the
-# help of Mix.Config.
+# This file is responsible for configuring your application
+# and its dependencies with the aid of the Mix.Config module.
 #
-# Note that all applications in your umbrella share the
-# same configuration and dependencies, which is why they
-# all use the same configuration file. If you want different
-# configurations or dependencies per app, it is best to
-# move said applications out of the umbrella.
+# This configuration file is loaded before any dependency and
+# is restricted to this project.
+
+# General application configuration
 use Mix.Config
 
-# Configure Mix tasks and generators
 config :unhatched,
   ecto_repos: [Unhatched.Repo]
 
-config :unhatched_web,
-  ecto_repos: [Unhatched.Repo],
-  generators: [context_app: :unhatched]
-
 # Configures the endpoint
-config :unhatched_web, UnhatchedWeb.Endpoint,
+config :unhatched, UnhatchedWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "g92/YaKvnUeVTV+mMIe6QpHzvtS/ojMwEaocMdhbMD4jAJtsEfmMZeAoPEehF04p",
+  secret_key_base: "zFv3mRdoKg/xsSAw9PKVfHp0wJZOgh6n6unGRSMTqZRsn3cV3wmGx4F3I15q/Bh8",
   render_errors: [view: UnhatchedWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: Unhatched.PubSub,
-  live_view: [signing_salt: "kRgQvmBD"]
+  live_view: [signing_salt: "y/77Ta0H"]
 
 # Configures Elixir's Logger
 config :logger, :console,
