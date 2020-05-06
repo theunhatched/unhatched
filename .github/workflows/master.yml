@@ -30,6 +30,7 @@ jobs:
         repo: blastocyst
         registry: ${{ steps.login-ecr.outputs.registry }}
         cache_from: ${{ steps.login-ecr.outputs.registry }}/blastocyst
+        auto_tag: true
         tags: latest,${IMAGE_TAG::7}
 
     - name: Logout of Amazon ECR
