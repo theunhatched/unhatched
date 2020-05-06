@@ -24,15 +24,13 @@ jobs:
       uses: aws-actions/amazon-ecr-login@v1
 
     - name: Build and Upload
-      uses: appleboy/docker-ecr-action@v0.0.2
+      uses: whoan/docker-build-with-cache-action@v5
       with:
-        access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        repo: blastocyst
+        username: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        password: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         registry: ${{ steps.login-ecr.outputs.registry }}
-        cache_from: ${{ steps.login-ecr.outputs.registry }}/blastocyst
-        auto_tag: true
-        tags: latest,${IMAGE_TAG::7}
+        image_name: blastocyst
+        iamge_tag: latest,${IMAGE_TAG::7}
 
     - name: Logout of Amazon ECR
       if: always()
