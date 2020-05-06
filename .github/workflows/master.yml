@@ -8,15 +8,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-
-    - run: pwd
-    - run: ls -l
-    - run: |
-        cd ..
-        ls -l
-
-    - run: pwd
-
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
@@ -28,16 +19,13 @@ jobs:
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
 
-    - run: pwd
-
     - name: Build, tag, and push image to Amazon ECR
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: blastocyst
         IMAGE_TAG: ${{ github.sha }}
       run: |
+        cd ..
+        ls -la
+        cd -
         docker build -t unhatched .
-        docker tag unhatched:latest $ECR_REGISTRY/$ECR_REPOSITORY:latest
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
-
-    - run: pwd
