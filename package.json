@@ -1,0 +1,52 @@
+{
+  "name": "unhatched",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "lint": "eslint .",
+    "start": "next start",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "next": "9.4.4",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.10.1",
+    "@babel/core": "7.10.2",
+    "@babel/preset-env": "7.10.2",
+    "@babel/preset-react": "7.10.1",
+    "@philihp/eslint-config": "1.1.0",
+    "babel-jest": "26.0.1",
+    "enzyme": "3.11.0",
+    "enzyme-adapter-react-16": "1.15.2",
+    "husky": "4.2.5",
+    "jest": "26.0.1",
+    "lint-staged": "10.2.10"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json}": [
+      "eslint --fix"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "trailingComma": "es5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "@philihp"
+    ]
+  }
+}
