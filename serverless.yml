@@ -14,7 +14,7 @@
 service: unhatched
 # app and org for use with dashboard.serverless.com
 app: unhatched-app
-org: philihp
+org: theunhatched
 
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
@@ -23,6 +23,9 @@ org: philihp
 provider:
   name: aws
   runtime: nodejs12.x
+
+plugins:
+  - serverless-nextjs-plugin
 
 # you can overwrite defaults here
 #  stage: dev
