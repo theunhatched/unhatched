@@ -1,0 +1,2 @@
+export AWS_KEY="AKI......"
+export AWS_SECRET=`pass aws.amazon.com/AKI...`
