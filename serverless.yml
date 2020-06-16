@@ -14,7 +14,7 @@
 service: unhatched
 # app and org for use with dashboard.serverless.com
 app: unhatched-app
-org: theunhatched
+org: unhatched
 
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
@@ -26,6 +26,11 @@ provider:
 
 plugins:
   - serverless-nextjs-plugin
+
+unhatched-app:
+  component: serverless-next.js
+  inputs:
+    domain: 'theunhatched.com'
 
 # you can overwrite defaults here
 #  stage: dev
