@@ -47,7 +47,8 @@
   },
   "eslintConfig": {
     "extends": [
-      "@philihp"
+      "@philihp",
+      "prettier/react"
     ]
   }
 }
