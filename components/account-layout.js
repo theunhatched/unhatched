@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { getLayout as getSiteLayout } from './site-layout'
-
-// https://codesandbox.io/s/5-getlayout-function-on-page-and-layout-components-7e1bg
+import { getLayout as getDefaultLayout } from './default-layout'
 
 const AccountLayout = ({ children }) => (
   <div>
@@ -13,7 +11,7 @@ const AccountLayout = ({ children }) => (
 )
 
 export const getLayout = (page) =>
-  getSiteLayout(<AccountLayout>{page}</AccountLayout>)
+  getDefaultLayout(<AccountLayout>{page}</AccountLayout>)
 
 AccountLayout.propTypes = {
   children: PropTypes.element.isRequired,

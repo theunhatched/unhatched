@@ -1,5 +1,5 @@
 import React from 'react'
-import { getLayout } from '../components/site-layout'
+import { getLayout } from '../components/default-layout'
 
 const Index = () => (
   <>
@@ -12,7 +12,6 @@ const Index = () => (
     <button type="button">Learn More</button>
   </>
 )
-
 Index.getLayout = getLayout
 
 export default Index

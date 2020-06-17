@@ -1,9 +1,7 @@
 import React from 'react'
-import SiteLayout from '../../components/site-layout'
 import { getLayout } from '../../components/account-layout'
 
-const BasicAccount = () => <div>basic account settings</div>
+const AccountBasic = () => <div>basic account settings</div>
+AccountBasic.getLayout = getLayout
 
-BasicAccount.getLayout = getLayout
-
-export default BasicAccount
+export default AccountBasic
