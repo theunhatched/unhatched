@@ -1,27 +1,18 @@
 import React from 'react'
-import Head from 'next/head'
+import { getLayout } from '../components/site-layout'
 
-export default function Home() {
-  return (
-    <div className="container">
-      <Head>
-        <title>Unhatched</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+const Index = () => (
+  <>
+    <h2>We&apos;re a woman-first fertility service.</h2>
+    <p>
+      We’re run by WoMen for women. We educate, prioritize, and match egg donors
+      and potential families in a totally transparent, step-by-step process.
+    </p>
+    <button type="button">Got Eggs?</button>
+    <button type="button">Learn More</button>
+  </>
+)
 
-      <main>
-        <h1 className="title">Unhatched</h1>
+Index.getLayout = getLayout
 
-        <p className="description">Coming soon...</p>
-      </main>
-
-      <footer>Built with &hearts; in San Francisco</footer>
-
-      <style jsx global>{`
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
-  )
-}
+export default Index
