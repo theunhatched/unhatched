@@ -12,4 +12,5 @@ module.exports = {
       '<rootDir>/__mocks__/mocks.js',
     '\\.(css|less|scss)$': '<rootDir>/__mocks__/mocks.js',
   },
+  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
 }
