@@ -9,24 +9,21 @@ const Header = () => (
       </Link>
     </h1>
     <ul className="LinkList">
-      <li>
+      <li className="LinkItem">
         <Link href="/about">About Us</Link>
       </li>
-      <li>
+      <li className="LinkItem">
         <Link href="/donor">Become a Donor</Link>
       </li>
-      <li>
+      <li className="LinkItem">
         <Link href="/account/login">Log in</Link>
       </li>
-      <li>
-        <Link class="CTA" href="/account/signup">
-          Sign up for Free
-        </Link>
+      <li className="LinkItem CTA">
+        <Link href="/account/signup">Sign up for Free</Link>
       </li>
     </ul>
     <style jsx>{`
       .Header {
-        border: 1px dashed green;
         grid-area: head;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         display: grid;
@@ -35,9 +32,8 @@ const Header = () => (
           / 1fr;
       }
       .Logo {
-        border: 1px dashed orange;
         grid-area: foot;
-        padding: 22px 40px;
+        padding: 22px 0 22px 40px;
         font-family: Playfair Display;
         font-style: normal;
         font-weight: 900;
@@ -46,26 +42,28 @@ const Header = () => (
       }
       .LinkList {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: flex-end;
         list-style: none;
       }
-      .LinkList li {
-        border: 1px dashed red;
-        padding: 9px 38px;
+      .LinkItem {
         font-size: 16px;
         color: #0d1c66;
+        margin: 0 16px;
+        padding: 0 16px;
+        margin: 18px 0px;
+        padding: 9px 38px;
       }
-      .LinkList li a {
-        border: 1px dashed blue;
+      a {
         font-family: Oswald;
         font-style: normal;
         font-weight: normal;
       }
-      .CTA {
+      .LinkItem.CTA {
         border: 1.5px solid #f69291;
         box-sizing: boder-box;
         border-radius: 4px;
+        margin: 18px 28px;
       }
     `}</style>
   </div>
