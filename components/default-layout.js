@@ -4,8 +4,8 @@ import Head from 'next/head'
 import Header from './header'
 import Footer from './footer'
 
-const SiteLayout = ({ children }) => (
-  <div className="SiteLayout">
+const DefaultLayout = ({ children }) => (
+  <div className="DefaultLayout">
     <Head>
       <title>Unhatched</title>
       <link rel="icon" href="/favicon.ico" />
@@ -15,30 +15,35 @@ const SiteLayout = ({ children }) => (
         content="width=device-width,minimum-scale=1,initial-scale=1"
       />
     </Head>
-
-    <Header />
+    <Header style={{ fontSize: 'large' }} />
     <div className="Content">{children}</div>
     <Footer />
-
     <style jsx>{`
-      .SiteLayout {
-        background-color: #c6e2e9;
-        height: 100%;
-        width: 100%;
+      .DefaultLayout {
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        grid-template:
+          'head' 77px
+          'main' 1fr
+          'foot' 30px
+          / 1fr;
       }
     `}</style>
     <style jsx global>{`
       * {
         box-sizing: border-box;
+        margin: 0;
+        padding: 0;
       }
     `}</style>
   </div>
 )
 
-SiteLayout.propTypes = {
+DefaultLayout.propTypes = {
   children: PropTypes.element.isRequired,
 }
 
-export const getLayout = (page) => <SiteLayout>{page}</SiteLayout>
+export const getLayout = (page) => <DefaultLayout>{page}</DefaultLayout>
 
-export default SiteLayout
+export default DefaultLayout

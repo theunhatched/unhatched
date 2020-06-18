@@ -1,8 +1,13 @@
 import React from 'react'
 
 const Main = () => (
-  <main>
-    <p className="description">Coming soon...</p>
+  <main className="Main">
+    <p>Coming soon...</p>
+    <style jsx>{`
+      .Main {
+        grid-area: main;
+      }
+    `}</style>
   </main>
 )
 
