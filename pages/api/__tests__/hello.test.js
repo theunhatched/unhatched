@@ -3,12 +3,12 @@ import hello from '../hello'
 describe('hello', () => {
   it('runs a test', () => {
     expect.assertions(1)
-    const req = {}
-    const res = {
+    const request = {}
+    const response = {
       statusCode: 0,
       json: jest.fn(),
     }
-    hello(req, res)
-    expect(res.statusCode).toBe(200)
+    hello(request, response)
+    expect(response.statusCode).toBe(200)
   })
 })
