@@ -1,8 +1,8 @@
 module.exports = {
   clearMocks: true,
   coverageDirectory: 'coverage',
-  coveragePathIgnorePatterns: ['/node_modules/', 'setupTests.js'],
-  setupFilesAfterEnv: ['<rootDir>/setupTests.js'],
+  coveragePathIgnorePatterns: ['/node_modules/', 'setup-tests.js'],
+  setupFilesAfterEnv: ['<rootDir>/setup-tests.js'],
   coverageReporters: ['json', 'lcov', 'text', 'text-summary'],
   transform: {
     '^.+\\.js$': 'babel-jest',
