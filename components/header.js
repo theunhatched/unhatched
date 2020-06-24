@@ -8,7 +8,11 @@ const Header = () => (
         <div className="Logo">unhatched</div>
       </Link>
     </h1>
+
     <ul className="LinkList">
+    <li className="LinkItem CTA">
+        <Link href="/account/signup">Sign up for Free</Link>
+      </li>
       <li className="LinkItem">
         <Link href="/about">About Us</Link>
       </li>
@@ -18,9 +22,7 @@ const Header = () => (
       <li className="LinkItem">
         <Link href="/account/login">Log in</Link>
       </li>
-      <li className="LinkItem CTA">
-        <Link href="/account/signup">Sign up for Free</Link>
-      </li>
+      
     </ul>
     <style jsx>{`
       .Header {
@@ -39,6 +41,23 @@ const Header = () => (
         font-weight: 900;
         font-size: 25px;
         color: #0d1c66;
+
+        /* unhatched 
+        position: absolute;
+        width: 150px;
+        height: 40px;
+        left: 40px;
+        top: 27px;*/
+
+        font-family: Playfair Display;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 40px;
+        /* identical to box height */
+
+
+        color: #0D1C66;
       }
       .LinkList {
         display: flex;
@@ -53,6 +72,14 @@ const Header = () => (
         padding: 0 16px;
         margin: 18px 0px;
         padding: 9px 38px;
+
+        font-family: Oswald;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 27px;
+        /* identical to box height */
+        color: #0D1C66;
       }
       a {
         font-family: Oswald;
@@ -60,11 +87,23 @@ const Header = () => (
         font-weight: normal;
       }
       .LinkItem.CTA {
-        border: 1.5px solid #f69291;
+        /*border: 1.5px solid #f69291;
         box-sizing: boder-box;
-        border-radius: 4px;
+        border-radius: 4px;*/
         margin: 18px 28px;
+
+       /* position: absolute;
+        width: 171px;
+        height: 48px;
+        left: 1231px;
+        top: 24px;*/
+
+        border: 1.5px solid #FFFFFF;
+        box-sizing: border-box;
+        border-radius: 4px;
       }
+
+
     `}</style>
   </div>
 )
