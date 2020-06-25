@@ -10,7 +10,7 @@ const Header = () => (
     </h1>
 
     <ul className="LinkList">
-    <li className="LinkItem CTA">
+      <li className="LinkItem CTA">
         <Link href="/account/signup">Sign up for Free</Link>
       </li>
       <li className="LinkItem">
@@ -22,7 +22,6 @@ const Header = () => (
       <li className="LinkItem">
         <Link href="/account/login">Log in</Link>
       </li>
-      
     </ul>
     <style jsx>{`
       .Header {
@@ -56,8 +55,7 @@ const Header = () => (
         line-height: 40px;
         /* identical to box height */
 
-
-        color: #0D1C66;
+        color: #0d1c66;
       }
       .LinkList {
         display: flex;
@@ -79,7 +77,7 @@ const Header = () => (
         font-size: 18px;
         line-height: 27px;
         /* identical to box height */
-        color: #0D1C66;
+        color: #0d1c66;
       }
       a {
         font-family: Oswald;
@@ -92,18 +90,16 @@ const Header = () => (
         border-radius: 4px;*/
         margin: 18px 28px;
 
-       /* position: absolute;
+        /* position: absolute;
         width: 171px;
         height: 48px;
         left: 1231px;
         top: 24px;*/
 
-        border: 1.5px solid #FFFFFF;
+        border: 1.5px solid #ffffff;
         box-sizing: border-box;
         border-radius: 4px;
       }
-
-
     `}</style>
   </div>
 )
