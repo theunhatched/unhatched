@@ -6,12 +6,9 @@ const Footer = () => (
     <style jsx>{`
       .Footer {
         grid-area: foot;
-      }
-    `}</style>
-    <style jsx>{`
-      .Footer {
         text-align: right;
         padding: 5px;
+        color: white;
       }
     `}</style>
   </footer>
