@@ -1,11 +1,6 @@
 module.exports = {
-  target: 'serverless',
-  excludeFile: (path) => /\*.{spec,test}.js/.test(path),
-  webpack: (config) => ({
+  webpack: (config, { webpack }) => ({
     ...config,
-    // Fixes npm packages that depend on `fs` module
-    node: {
-      fs: 'empty',
-    },
+    plugins: [...config.plugins, new webpack.IgnorePlugin(/__tests__\/.*/)],
   }),
 }
