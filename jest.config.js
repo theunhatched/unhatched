@@ -1,5 +1,6 @@
 module.exports = {
   clearMocks: true,
+  collectCoverageFrom: ['pages/**/*.js', 'components/**/*.js'],
   coverageDirectory: 'coverage',
   coveragePathIgnorePatterns: ['/node_modules/', 'setup-tests.js'],
   setupFilesAfterEnv: ['<rootDir>/setup-tests.js'],
