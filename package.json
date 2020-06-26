@@ -29,7 +29,7 @@
     "lint-staged": "10.2.11"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,json}": [
+    "**/*.{js,jsx,json}": [
       "eslint --fix"
     ]
   },
