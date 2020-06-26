@@ -29,6 +29,12 @@ const Index = () => (
         font-size: 76px;
         line-height: 101px;
         color: #ffffff;
+
+        position: absolute;
+        width: 720px;
+        height: 202px;
+        left: 120px;
+        top: 166px;
       }
       .womenSecondContentHeader {
         padding: 20px 0;
@@ -39,6 +45,12 @@ const Index = () => (
         line-height: 180%;
         /* or 36px */
         color: #ffffff;
+
+        position: absolute;
+        width: 671px;
+        height: 108px;
+        left: 120px;
+        top: 399px;
       }
       .gotEggsbtn {
         padding: 10px 50px;
@@ -54,6 +66,12 @@ const Index = () => (
         line-height: 31px;
 
         color: #ffffff;
+
+        position: absolute;
+        width: 217px;
+        height: 57px;
+        left: 125px;
+        top: 551px;
       }
       .learnMorebtn {
         margin-left: 30px;
@@ -71,6 +89,12 @@ const Index = () => (
         line-height: 31px;
 
         color: #0d1c66;
+
+        position: absolute;
+        width: 217px;
+        height: 57px;
+        left: 365px;
+        top: 551px;
       }
     `}</style>
   </div>
