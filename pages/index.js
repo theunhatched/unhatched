@@ -12,7 +12,7 @@ const Index = () => (
       transparent, step-by-step process.
     </p>
     <button type="button" className="gotEggsbtn">
-      Got Eggs?
+        <a href="/account/signup">Got Eggs?</a>
     </button>
     <button type="button" className="learnMorebtn">
       Learn More
@@ -28,7 +28,7 @@ const Index = () => (
         font-weight: 900;
         font-size: 76px;
         line-height: 101px;
-        color: #ffffff;
+        color: #fdfdfd;
 
         position: absolute;
         width: 720px;
@@ -44,7 +44,7 @@ const Index = () => (
         font-size: 20px;
         line-height: 180%;
         /* or 36px */
-        color: #ffffff;
+        color: #fdfdfd;
 
         position: absolute;
         width: 671px;
@@ -65,7 +65,7 @@ const Index = () => (
         font-size: 21px;
         line-height: 31px;
 
-        color: #ffffff;
+        color: #fdfdfd;
 
         position: absolute;
         width: 217px;
@@ -78,7 +78,7 @@ const Index = () => (
         padding: 10px 50px;
 
         background: #ffd7d7;
-        border: 1.5px solid #ffffff;
+        border: 1.5px solid #fdfdfd;
         box-sizing: border-box;
         border-radius: 4px;
 

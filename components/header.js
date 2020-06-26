@@ -26,7 +26,7 @@ const Header = () => (
     <style jsx>{`
       .Header {
         grid-area: head;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+       box-shadow: none;
         display: grid;
         grid-template:
           'logo link'
@@ -83,8 +83,9 @@ const Header = () => (
         font-family: Oswald;
         font-style: normal;
         font-weight: normal;
-        color: inherit; /* blue colors for links too */
-        text-decoration: inherit; /* no underline */
+        color: inherit;
+        text-decoration: none;
+
       }
       .LinkItem.CTA {
         /*border: 1.5px solid #f69291;

@@ -45,6 +45,14 @@ const DefaultLayout = ({ children }) => (
         margin: 0;
         padding: 0;
       }
+      a {
+        font-family: Oswald;
+        font-style: normal;
+        font-weight: normal;
+        color: inherit;
+        text-decoration: none;
+
+      }
     `}</style>
   </div>
 )
