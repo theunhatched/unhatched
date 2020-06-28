@@ -11,22 +11,22 @@ const Header = () => (
 
     <ul className="LinkList">
       <li className="LinkItem CTA">
-        <Link href="/account/signup">Sign up for Free</Link>
+        <Link href="/account/signup">SIGN UP FOR FREE</Link>
       </li>
       <li className="LinkItem">
-        <Link href="/about">About Us</Link>
+        <Link href="/about">ABOUT US</Link>
       </li>
       <li className="LinkItem">
-        <Link href="/donor">Become a Donor</Link>
+        <Link href="/donor">BECOME A DONOR</Link>
       </li>
       <li className="LinkItem">
-        <Link href="/account/login">Log in</Link>
+        <Link href="/account/login">LOG IN</Link>
       </li>
     </ul>
     <style jsx>{`
       .Header {
         grid-area: head;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: none;
         display: grid;
         grid-template:
           'logo link'
@@ -83,6 +83,8 @@ const Header = () => (
         font-family: Oswald;
         font-style: normal;
         font-weight: normal;
+        color: inherit;
+        text-decoration: none;
       }
       .LinkItem.CTA {
         /*border: 1.5px solid #f69291;

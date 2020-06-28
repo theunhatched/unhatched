@@ -9,6 +9,11 @@ const DefaultLayout = ({ children }) => (
     <Head>
       <title>Unhatched</title>
       <link rel="icon" href="/favicon.ico" />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Oswald&family=Ruda&family=Playfair+display"
+      />
+
       <meta charSet="utf-8" />
       <meta
         name="viewport"
@@ -30,11 +35,12 @@ const DefaultLayout = ({ children }) => (
           / 1fr;
 
         background: #f0a3a1;
+        /*
         background: radial-gradient(
           50% 50% at 50% 50%,
           rgba(240, 163, 161, 0.4) 0%,
           rgba(255, 121, 121, 0.4) 100%
-        );
+        );*/
       }
     `}</style>
     <style jsx global>{`
@@ -42,6 +48,13 @@ const DefaultLayout = ({ children }) => (
         box-sizing: border-box;
         margin: 0;
         padding: 0;
+      }
+      a {
+        font-family: Oswald;
+        font-style: normal;
+        font-weight: normal;
+        color: inherit;
+        text-decoration: none;
       }
     `}</style>
   </div>

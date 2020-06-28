@@ -12,7 +12,7 @@ const Index = () => (
       transparent, step-by-step process.
     </p>
     <button type="button" className="gotEggsbtn">
-      Got Eggs?
+      <a href="/account/signup">Got Eggs?</a>
     </button>
     <button type="button" className="learnMorebtn">
       Learn More
@@ -28,7 +28,13 @@ const Index = () => (
         font-weight: 900;
         font-size: 76px;
         line-height: 101px;
-        color: #ffffff;
+        color: #fdfdfd;
+
+        position: absolute;
+        width: 720px;
+        height: 202px;
+        left: 120px;
+        top: 166px;
       }
       .womenSecondContentHeader {
         padding: 20px 0;
@@ -38,7 +44,13 @@ const Index = () => (
         font-size: 20px;
         line-height: 180%;
         /* or 36px */
-        color: #ffffff;
+        color: #fdfdfd;
+
+        position: absolute;
+        width: 671px;
+        height: 108px;
+        left: 120px;
+        top: 399px;
       }
       .gotEggsbtn {
         padding: 10px 50px;
@@ -53,14 +65,20 @@ const Index = () => (
         font-size: 21px;
         line-height: 31px;
 
-        color: #ffffff;
+        color: #fdfdfd;
+
+        position: absolute;
+        width: 217px;
+        height: 57px;
+        left: 125px;
+        top: 551px;
       }
       .learnMorebtn {
         margin-left: 30px;
         padding: 10px 50px;
 
         background: #ffd7d7;
-        border: 1.5px solid #ffffff;
+        border: 1.5px solid #fdfdfd;
         box-sizing: border-box;
         border-radius: 4px;
 
@@ -71,6 +89,12 @@ const Index = () => (
         line-height: 31px;
 
         color: #0d1c66;
+
+        position: absolute;
+        width: 217px;
+        height: 57px;
+        left: 365px;
+        top: 551px;
       }
     `}</style>
   </div>
