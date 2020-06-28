@@ -12,7 +12,7 @@ const Index = () => (
       transparent, step-by-step process.
     </p>
     <button type="button" className="gotEggsbtn">
-        <a href="/account/signup">Got Eggs?</a>
+      <a href="/account/signup">Got Eggs?</a>
     </button>
     <button type="button" className="learnMorebtn">
       Learn More

@@ -9,12 +9,16 @@ const DefaultLayout = ({ children }) => (
     <Head>
       <title>Unhatched</title>
       <link rel="icon" href="/favicon.ico" />
-      <link  rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald&family=Ruda&family=Playfair+display"/>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Oswald&family=Ruda&family=Playfair+display"
+      />
 
       <meta charSet="utf-8" />
       <meta
         name="viewport"
-        content="width=device-width,minimum-scale=1,initial-scale=1"/>
+        content="width=device-width,minimum-scale=1,initial-scale=1"
+      />
     </Head>
     <Header style={{ fontSize: 'large' }} />
     <div className="Content">{children}</div>
@@ -30,7 +34,7 @@ const DefaultLayout = ({ children }) => (
           'foot' 30px
           / 1fr;
 
-        background: #F0A3A1;
+        background: #f0a3a1;
         /*
         background: radial-gradient(
           50% 50% at 50% 50%,
@@ -51,7 +55,6 @@ const DefaultLayout = ({ children }) => (
         font-weight: normal;
         color: inherit;
         text-decoration: none;
-
       }
     `}</style>
   </div>
