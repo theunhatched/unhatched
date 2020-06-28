@@ -79,7 +79,7 @@ const Header = () => (
         /* identical to box height */
         color: #0d1c66;
       }
-       a {
+      a {
         font-family: Oswald;
         font-style: normal;
         font-weight: normal;
