@@ -6,6 +6,6 @@ describe('footer', () => {
   it('renders a footer', () => {
     expect.assertions(1)
     const wrapper = mount(<Footer />)
-    expect(wrapper.find('footer').text()).toBe('Built with ♥ in San Francisco')
+    expect(wrapper.find('footer').text()).toBe('')
   })
 })
