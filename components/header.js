@@ -26,7 +26,6 @@ const Header = () => (
     <style jsx>{`
       .Header {
         grid-area: head;
-        box-shadow: none;
         display: grid;
         grid-template:
           'logo link'
