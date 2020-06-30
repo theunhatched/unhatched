@@ -4,7 +4,6 @@ import { getLayout as getDefaultLayout } from './default-layout'
 
 const AccountLayout = ({ children }) => (
   <div>
-    account layout
     <hr />
     {children}
   </div>

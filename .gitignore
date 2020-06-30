@@ -35,3 +35,8 @@ yarn-error.log*
 
 # Next.js
 .next
+
+# VS-Code - ignore everything except the recommended extensions file
+.vscode/*
+!.vscode/extensions.json
+
