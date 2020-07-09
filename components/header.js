@@ -40,6 +40,8 @@ const Header = () => (
         grid-template:
           'logo link'
           / 1fr;
+
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
       }
       .Logo {
         grid-area: foot;

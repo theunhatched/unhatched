@@ -36,7 +36,7 @@ const DefaultLayout = ({ children, styles }) => (
 
         } 
 
-        background: ${styles?.background || '#f0a3a1'};
+        background: ${styles?.background || 'auto'};
       }
     `}</style>
     <style jsx global>{`
