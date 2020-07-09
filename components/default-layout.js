@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Header from './header'
 import Footer from './footer'
 
-const DefaultLayout = ({ children }) => (
+const DefaultLayout = ({ children, styles }) => (
   <div className="DefaultLayout">
     <Head>
       <title>Unhatched</title>
@@ -34,13 +34,9 @@ const DefaultLayout = ({ children }) => (
           'foot' 30px
           / 1fr;
 
-        background: #f0a3a1;
-        /*
-        background: radial-gradient(
-          50% 50% at 50% 50%,
-          rgba(240, 163, 161, 0.4) 0%,
-          rgba(255, 121, 121, 0.4) 100%
-        );*/
+        } 
+
+        background: ${styles?.background || '#f0a3a1'};
       }
     `}</style>
     <style jsx global>{`
@@ -98,8 +94,11 @@ const DefaultLayout = ({ children }) => (
 
 DefaultLayout.propTypes = {
   children: PropTypes.element.isRequired,
+  styles: PropTypes.string.isRequired,
 }
 
-export const getLayout = (page) => <DefaultLayout>{page}</DefaultLayout>
+export const getLayout = (page, styles = {}) => (
+  <DefaultLayout styles={styles}>{page}</DefaultLayout>
+)
 
 export default DefaultLayout
