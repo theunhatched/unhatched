@@ -4,23 +4,33 @@ import Link from 'next/link'
 const Header = () => (
   <div className="Header">
     <h1>
-      <Link href="/">
-        <div className="Logo">unhatched</div>
-      </Link>
+      <div className="Logo">
+        <Link href="/">
+          <a>unhatched</a>
+        </Link>
+      </div>
     </h1>
 
     <ul className="LinkList">
       <li className="LinkItem CTA">
-        <Link href="/account/signup">SIGN UP FOR FREE</Link>
+        <Link href="/account/signup">
+          <a>SIGN UP FOR FREE</a>
+        </Link>
       </li>
       <li className="LinkItem">
-        <Link href="/about">ABOUT US</Link>
+        <Link href="/about">
+          <a>ABOUT US</a>
+        </Link>
       </li>
       <li className="LinkItem">
-        <Link href="/donor">BECOME A DONOR</Link>
+        <Link href="/donor">
+          <a>BECOME A DONOR</a>
+        </Link>
       </li>
       <li className="LinkItem">
-        <Link href="/account/login">LOG IN</Link>
+        <Link href="/account/login">
+          <a>LOG IN</a>
+        </Link>
       </li>
     </ul>
     <style jsx>{`

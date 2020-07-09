@@ -2,16 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { getLayout as getDefaultLayout } from './default-layout'
 
-const AccountLayout = ({ children }) => {
-  return <div>{children}</div>
-}
+const AccountLayout = ({ children }) => <>{children}</>
 
-export const getLayout = (page) => {
-  return getDefaultLayout(
-    <AccountLayout styles={{ foo: 'bar' }}>{page}</AccountLayout>,
-    { background: '#ffffff' }
-  )
-}
+export const getLayout = (page) =>
+  getDefaultLayout(<AccountLayout>{page}</AccountLayout>, {
+    background: '#ffffff',
+  })
 
 AccountLayout.propTypes = {
   children: PropTypes.element.isRequired,
