@@ -60,7 +60,11 @@ DefaultLayout.propTypes = {
   children: PropTypes.element.isRequired,
   styles: PropTypes.shape({
     background: PropTypes.string,
-  }).isRequired,
+  }),
+}
+
+DefaultLayout.defaultProps = {
+  styles: {},
 }
 
 export const getLayout = (page, styles = {}) => (
