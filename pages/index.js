@@ -1,5 +1,5 @@
 import React from 'react'
-import { getLayout } from '../components/default-layout'
+import { getLayout } from '../components/hero-layout'
 
 const Index = () => (
   <div className="Index">

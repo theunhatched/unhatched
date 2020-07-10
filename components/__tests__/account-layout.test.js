@@ -1,16 +1,16 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import AccountLayout from '../account-layout'
+import HeroLayout from '../hero-layout'
 
 const BUT_REALLY = "epstein didn't kill himself"
 
-describe('account-layout', () => {
-  it('renders account-layout', () => {
+describe('hero-layout', () => {
+  it('renders hero-layout', () => {
     expect.assertions(1)
     const wrapper = shallow(
-      <AccountLayout>
+      <HeroLayout>
         <div id="content">{BUT_REALLY}</div>
-      </AccountLayout>
+      </HeroLayout>
     )
     expect(wrapper.find('div#content').text()).toBe(BUT_REALLY)
   })

@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Header from './header'
 import Footer from './footer'
 
-const DefaultLayout = ({ children }) => (
+const DefaultLayout = ({ children, styles }) => (
   <div className="DefaultLayout">
     <Head>
       <title>Unhatched</title>
@@ -34,13 +34,9 @@ const DefaultLayout = ({ children }) => (
           'foot' 30px
           / 1fr;
 
-        background: #f0a3a1;
-        /*
-        background: radial-gradient(
-          50% 50% at 50% 50%,
-          rgba(240, 163, 161, 0.4) 0%,
-          rgba(255, 121, 121, 0.4) 100%
-        );*/
+        } 
+
+        background: ${styles?.background || 'auto'};
       }
     `}</style>
     <style jsx global>{`
@@ -56,50 +52,23 @@ const DefaultLayout = ({ children }) => (
         color: inherit;
         text-decoration: none;
       }
-
-      .startTitle {
-        position: absolute;
-        width: 152px;
-        height: 56px;
-        left: 118px;
-        top: 143px;
-
-        font-family: Playfair Display;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 42px;
-        line-height: 56px;
-        /* identical to box height */
-
-        color: rgba(0, 0, 0, 0.87);
-      }
-      .secondaryContent {
-        font-family: Ruda;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 180%;
-        /* identical to box height, or 29px */
-        color: rgba(0, 0, 0, 0.6);
-      }
-
-      .secondaryTitle {
-        font-family: Ruda;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 22px;
-        /* identical to box height */
-        color: rgba(0, 0, 0, 0.87);
-      }
     `}</style>
   </div>
 )
 
 DefaultLayout.propTypes = {
   children: PropTypes.element.isRequired,
+  styles: PropTypes.shape({
+    background: PropTypes.string,
+  }),
 }
 
-export const getLayout = (page) => <DefaultLayout>{page}</DefaultLayout>
+DefaultLayout.defaultProps = {
+  styles: {},
+}
+
+export const getLayout = (page, styles = {}) => (
+  <DefaultLayout styles={styles}>{page}</DefaultLayout>
+)
 
 export default DefaultLayout

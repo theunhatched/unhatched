@@ -1,5 +1,5 @@
 import React from 'react'
-import { getLayout } from '../../components/account-layout'
+import { getLayout } from '../../components/default-layout'
 
 const AccountSignup = () => (
   <>
@@ -61,6 +61,43 @@ const AccountSignup = () => (
     </div>
 
     <style jsx>{`
+      .startTitle {
+        position: absolute;
+        width: 152px;
+        height: 56px;
+        left: 118px;
+        top: 143px;
+
+        font-family: Playfair Display;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 42px;
+        line-height: 56px;
+        /* identical to box height */
+
+        color: rgba(0, 0, 0, 0.87);
+      }
+
+      .secondaryContent {
+        font-family: Ruda;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 180%;
+        /* identical to box height, or 29px */
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      .secondaryTitle {
+        font-family: Ruda;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height */
+        color: rgba(0, 0, 0, 0.87);
+      }
+
       #signupForm {
         position: absolute;
         width: 480px;

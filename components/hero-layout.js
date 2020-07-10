@@ -2,18 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { getLayout as getDefaultLayout } from './default-layout'
 
-const AccountLayout = ({ children }) => (
-  <div>
-    <hr />
-    {children}
-  </div>
-)
+const HeroLayout = ({ children }) => <>{children}</>
 
 export const getLayout = (page) =>
-  getDefaultLayout(<AccountLayout>{page}</AccountLayout>)
+  getDefaultLayout(<HeroLayout>{page}</HeroLayout>, {
+    background: '#f0a3a1',
+  })
 
-AccountLayout.propTypes = {
+HeroLayout.propTypes = {
   children: PropTypes.element.isRequired,
 }
 
-export default AccountLayout
+export default HeroLayout
