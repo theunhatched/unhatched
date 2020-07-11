@@ -1,7 +1,11 @@
 import React from 'react'
-import { getLayout } from '../../components/default-layout'
+import Layout from '../../components/layout'
 
-const AccountBasic = () => <div>basic account settings</div>
-AccountBasic.getLayout = getLayout
+const AccountBasic = () => (
+  <Layout>
+    <h1>Protected Page</h1>
+    This should only be viewable if logged in
+  </Layout>
+)
 
 export default AccountBasic

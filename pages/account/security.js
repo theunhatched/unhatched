@@ -1,7 +1,6 @@
 import React from 'react'
-import { getLayout } from '../../components/default-layout'
+import Layout from '../../components/layout'
 
-const AccountSecurity = () => <div>security account settings</div>
-AccountSecurity.getLayout = getLayout
+const AccountSecurity = () => <Layout>security account settings</Layout>
 
 export default AccountSecurity

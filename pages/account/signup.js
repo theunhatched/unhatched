@@ -1,8 +1,8 @@
 import React from 'react'
-import { getLayout } from '../../components/default-layout'
+import Layout from '../../components/layout'
 
 const AccountSignup = () => (
-  <>
+  <Layout>
     <div className="signupBackground">
       <div className="startTitle">Sign Up</div>
       <div className="secondaryContent signupPosition1">
@@ -226,8 +226,7 @@ const AccountSignup = () => (
         color: #0d1c66;
       }
     `}</style>
-  </>
+  </Layout>
 )
-AccountSignup.getLayout = getLayout
 
 export default AccountSignup
