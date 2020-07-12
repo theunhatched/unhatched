@@ -1,12 +1,11 @@
 import React from 'react'
-import { getLayout } from '../components/default-layout'
+import Layout from '../components/layout'
 
 const Donor = () => (
-  <>
+  <Layout>
     <h2>Become a Donor</h2>
     <div> test </div>
-  </>
+  </Layout>
 )
-Donor.getLayout = getLayout
 
 export default Donor

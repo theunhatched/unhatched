@@ -1,6 +1,6 @@
 import React from 'react'
 import fetch from 'isomorphic-unfetch'
-import { getLayout } from '../../components/default-layout'
+import Layout from '../../components/layout'
 
 class Clock extends React.Component {
   constructor(properties) {
@@ -32,10 +32,8 @@ class Clock extends React.Component {
 }
 
 const AccountProfile = () => (
-  <div>
+  <Layout>
     <Clock />
-  </div>
+  </Layout>
 )
-AccountProfile.getLayout = getLayout
-
 export default AccountProfile
