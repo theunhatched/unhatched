@@ -40,3 +40,5 @@ yarn-error.log*
 # VS-Code - ignore everything except the recommended extensions file
 .vscode/*
 !.vscode/extensions.json
+
+.vercel
