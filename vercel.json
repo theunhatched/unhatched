@@ -4,8 +4,8 @@
       "AUTH0_SCOPE": "openid profile read:shows offline_access",
       "AUTH0_DOMAIN": "philihp.us.auth0.com",
       "AUTH0_CLIENT_ID": "8zIW7bwGMi8lxzhvK4AZc5OU8JS2Cw7b",
-      "AUTH0_CLIENT_SECRET": "@AUTH0_CLIENT_SECRET",
-      "SESSION_COOKIE_SECRET": "@SESSION_COOKIE_SECRET",
+      "AUTH0_CLIENT_SECRET": "@auth0_client_secret",
+      "SESSION_COOKIE_SECRET": "@session_cookie_secret",
       "REDIRECT_URI": "https://theunhatched.com/api/callback",
       "POST_LOGOUT_REDIRECT_URI": "https://theunhatched.com/"
     }
