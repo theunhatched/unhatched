@@ -1,0 +1,7 @@
+export AUTH0_DOMAIN=philihp.us.auth0.com
+export AUTH0_SCOPE="openid profile read:shows offline_access"
+export AUTH0_CLIENT_ID=8zIW7bwGMi8lxzhvK4AZc5OU8JS2Cw7b
+export REDIRECT_URI=http://localhost:3000/api/callback
+export POST_LOGOUT_REDIRECT_URI=http://localhost:3000/
+export AUTH0_CLIENT_SECRET= [ get this from auth0 ]
+export SESSION_COOKIE_SECRET= [ make noise here. lots of noise. ]
