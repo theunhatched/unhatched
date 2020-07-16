@@ -18,6 +18,8 @@ jobs:
           node-version: 14.4
       - run: npm install
       - run: npm run build --if-present
+        env:
+          AUTH0_DOMAIN: test.us.auth0.com
       - run: npm run test:coverage
       - name: Coveralls
         uses: coverallsapp/github-action@master
