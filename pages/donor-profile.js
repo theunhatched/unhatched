@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import { useFetchUser } from '../lib/user'
 
-const Donor = () => {
+const DonorProfile = () => {
   const { user, loading } = useFetchUser()
 
   return (
@@ -15,4 +15,4 @@ const Donor = () => {
   )
 }
 
-export default Donor
+export default DonorProfile

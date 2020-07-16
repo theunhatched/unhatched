@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import { useFetchUser } from '../lib/user'
 
-const About = () => {
+const Community = () => {
   const { user, loading } = useFetchUser()
 
   return (
@@ -13,4 +13,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Community
