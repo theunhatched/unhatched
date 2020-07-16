@@ -5,26 +5,27 @@ import Header from './header'
 import Footer from './footer'
 import { UserProvider } from '../lib/user'
 
-const Layout = ({ user, loading, children }) => (
-  <UserProvider value={{ user, loading }}>
+const Layout = ({ user, loading, style, children }) => (
+  <>
     <div className="Layout">
-      <Head>
-        <title>Unhatched</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Oswald&family=Ruda&family=Playfair+display"
-        />
-
-        <meta charSet="utf-8" />
-        <meta
-          name="viewport"
-          content="width=device-width,minimum-scale=1,initial-scale=1"
-        />
-      </Head>
-      <Header style={{ fontSize: 'large' }} />
-      <div className="Content">{children}</div>
-      <Footer />
+      <UserProvider value={{ user, loading }}>
+        <Head>
+          <title>Unhatched</title>
+          <link rel="icon" href="/favicon.ico" />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Oswald&family=Ruda&family=Playfair+display"
+          />
+          <meta charSet="utf-8" />
+          <meta
+            name="viewport"
+            content="width=device-width,minimum-scale=1,initial-scale=1"
+          />
+        </Head>
+        <Header style={style} />
+        <div className="Content">{children}</div>
+        <Footer style={style} />
+      </UserProvider>
     </div>
     <style jsx>{`
       .Layout {
@@ -36,8 +37,11 @@ const Layout = ({ user, loading, children }) => (
           'main' 1fr
           'foot' 30px
           / 1fr;
-
-        } 
+        background-color: ${style?.backgroundColor};
+      }
+      .Content {
+        margin: 10px auto;
+        width: 800px;
       }
     `}</style>
     <style jsx global>{`
@@ -54,22 +58,24 @@ const Layout = ({ user, loading, children }) => (
         text-decoration: none;
       }
     `}</style>
-  </UserProvider>
+  </>
 )
 
 Layout.propTypes = {
   user: PropTypes.any,
   loading: PropTypes.bool,
   children: PropTypes.any.isRequired,
+  style: PropTypes.shape({
+    backgroundColor: PropTypes.string,
+  }),
 }
 
 Layout.defaultProps = {
   user: undefined,
   loading: false,
+  style: {
+    backgroundColor: undefined,
+  },
 }
-
-export const getLayout = (page, styles = {}) => (
-  <Layout styles={styles}>{page}</Layout>
-)
 
 export default Layout

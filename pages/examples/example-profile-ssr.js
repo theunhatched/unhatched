@@ -1,9 +1,7 @@
 import React from 'react'
 
-// import auth0 from '../lib/auth0'
-// import { fetchUser } from '../lib/user'
-import Layout from '../components/layout'
-import withAuth from '../components/with-auth'
+import Layout from '../../components/layout'
+import withAuth from '../../components/with-auth'
 
 // eslint-disable-next-line react/prop-types
 const Profile = ({ user }) => (

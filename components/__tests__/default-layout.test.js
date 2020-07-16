@@ -1,14 +1,14 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import DefaultLayout from '../default-layout'
+import Layout from '../layout'
 
-describe('default-layout', () => {
+describe('layout', () => {
   it('renders default-layout', () => {
     expect.assertions(1)
     const wrapper = shallow(
-      <DefaultLayout>
+      <Layout>
         <div className="pageContent">page content</div>
-      </DefaultLayout>
+      </Layout>
     )
     expect(wrapper.find('div.pageContent')).toHaveLength(1)
   })
