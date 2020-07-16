@@ -5,6 +5,8 @@ export default async function login(request, response) {
   try {
     console.log('LOGIN')
     console.log(config)
+    console.log('REQ')
+    console.log(request)
     console.log('ENV')
     console.log(process.env)
     console.log('END')
