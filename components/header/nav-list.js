@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const NavList = ({ children }) => (
-  <ul className="LinkList">
+  <ul className="NavList">
     {children}
     <style jsx>
       {`
-        .LinkList {
+        .NavList {
           display: flex;
           flex-wrap: nowrap;
           justify-content: flex-end;

@@ -4,12 +4,12 @@ import Link from 'next/link'
 import cx from 'classnames'
 
 const NavItem = ({ href, children, cta }) => (
-  <li className={cx({ LinkItem: true, CTA: cta })}>
+  <li className={cx({ NavItem: true, CTA: cta })}>
     <Link href={href}>
       <a>{children}</a>
     </Link>
     <style jsx>{`
-      .LinkItem {
+      .NavItem {
         font-size: 16px;
         color: #0d1c66;
         margin: 18px 0px;
@@ -30,7 +30,7 @@ const NavItem = ({ href, children, cta }) => (
         color: inherit;
         text-decoration: none;
       }
-      .LinkItem.CTA {
+      .NavItem.CTA {
         box-sizing: boder-box;
         border-radius: 4px;*/
         margin: 18px 28px;
