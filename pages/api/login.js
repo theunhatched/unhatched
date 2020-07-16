@@ -5,6 +5,9 @@ export default async function login(request, response) {
   try {
     console.log('LOGIN')
     console.log(config)
+    console.log('ENV')
+    console.log(process.env)
+    console.log('END')
     await auth0.handleLogin(request, response)
   } catch (error) {
     console.error(error)
