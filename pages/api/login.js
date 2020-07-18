@@ -1,6 +1,6 @@
+import absoluteUrl from 'next-absolute-url'
 import auth0 from '../../lib/auth0'
 import config from '../../lib/config'
-import absoluteUrl from 'next-absolute-url'
 
 export default async function login(request, response) {
   try {
@@ -11,7 +11,11 @@ export default async function login(request, response) {
     console.log('=============')
     console.log({ baseUrl })
     console.log({ requestUrl })
+    console.log(request.url)
     console.log('=======')
+    if (baseUrl !== requestUrl) {
+      response.redirect(`${requestUrl}${request.url}`)
+    }
     await auth0.handleLogin(request, response)
   } catch (error) {
     console.error(error)
