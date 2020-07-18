@@ -4,9 +4,14 @@ import absoluteUrl from 'next-absolute-url'
 
 export default async function login(request, response) {
   try {
-    console.log('LOGIN')
-    console.log(absoluteUrl(request).origin)
-    console.log('END')
+    const baseUrl = process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : 'http://localhost:3000'
+    const requestUrl = absoluteUrl(request).origin
+    console.log('=============')
+    console.log({ baseUrl })
+    console.log({ requestUrl })
+    console.log('=======')
     await auth0.handleLogin(request, response)
   } catch (error) {
     console.error(error)
