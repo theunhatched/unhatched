@@ -14,7 +14,8 @@ export default async function login(request, response) {
     console.log(request.url)
     console.log('=======')
     if (baseUrl !== requestUrl) {
-      response.redirect(`${requestUrl}${request.url}`)
+      response.writeHead(301, { Location: `${requestUrl}${request.url}` })
+      return response.end()
     }
     await auth0.handleLogin(request, response)
   } catch (error) {
