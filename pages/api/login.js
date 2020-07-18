@@ -12,9 +12,11 @@ export default async function login(request, response) {
     console.log({ baseUrl })
     console.log({ requestUrl })
     console.log(request.url)
+    console.log('protocol', request.protocol)
+    console.log('encryptd', request.connection.encrypted)
     console.log('=======')
     if (baseUrl !== requestUrl) {
-      response.writeHead(301, { Location: `${requestUrl}${request.url}` })
+      response.writeHead(301, { Location: `${baseUrl}${request.url}` })
       return response.end()
     }
     await auth0.handleLogin(request, response)
