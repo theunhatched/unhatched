@@ -8,7 +8,7 @@
 ❯ git clone git@github.com:theunhatched/unhatched.git
 ```
 
-2. Ensure you have Node installed. You'll want the version in .tool-versions, which will be automatically selected if you use [asdf](https://gist.github.com/philihp/7453e9051663a52f442ed6a7afdddd61)
+2. Ensure you have Node installed. You'll want the version in .tool-versions, which will be automatically selected if you use [asdf](https://gist.github.com/philihp/7453e9051663a52f442ed6a7afdddd61)... using other versions should work too, probably.
 
 ```
 ❯ node -v
