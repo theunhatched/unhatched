@@ -41,7 +41,7 @@ const Layout = ({ user, loading, style, children }) => (
       }
       .Content {
         margin: 10px auto;
-        width: 800px;
+        width: 1200px;
       }
     `}</style>
     <style jsx global>{`
