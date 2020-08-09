@@ -22,11 +22,11 @@ const AboutUs = () => {
       <div className="subtitle">
         We believe in a future where creating families is a non-exploited,
         ethical, and trusted opportunity that both Sponsors and Donors can feel
-        good about; where the impact of Invitro Fertilization (IVF) on womens
-        bodies is heavily documented, well researched, and where all impact on
-        womens&apos; bodies is understood. Most of all, we believe in a future
-        where women are taxed more (hello Pink tax) but are also doing way more
-        work (hello creating potential life in our ovaries each month).
+        good about; where the impact of Invitro Fertilization (IVF) on
+        womens&apos; bodies is heavily documented, well researched, and where
+        all impact on womens&apos; bodies is understood. Most of all, we believe
+        in a future where women are taxed fairly (hello Pink tax) after creating
+        potential life in our ovaries.
       </div>
       <div className="subtitle">
         We&apos;ve gone through Invitro Fertilization (IVF) and believe that the
