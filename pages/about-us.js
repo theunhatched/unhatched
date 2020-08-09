@@ -25,8 +25,8 @@ const AboutUs = () => {
         good about; where the impact of Invitro Fertilization (IVF) on
         womens&apos; bodies is heavily documented, well researched, and where
         all impact on womens&apos; bodies is understood. Most of all, we believe
-        in a future where women are taxed fairly (hello Pink tax) after creating
-        potential life in our ovaries.
+        in a future where women are taxed fairly (goodbye Pink tax) after
+        creating potential life in our ovaries.
       </div>
       <div className="subtitle">
         We&apos;ve gone through Invitro Fertilization (IVF) and believe that the
