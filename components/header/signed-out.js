@@ -4,7 +4,7 @@ import NavItem from './nav-item'
 
 const SignedOut = () => (
   <NavList>
-    <NavItem href="/about">About Us</NavItem>
+    <NavItem href="/about-us">About Us</NavItem>
     <NavItem href="/become-a-donor">Become a Donor</NavItem>
     <NavItem href="/api/login">Log In</NavItem>
     <NavItem href="/api/signup" cta>
