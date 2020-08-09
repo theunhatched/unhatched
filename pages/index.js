@@ -14,13 +14,13 @@ export default function Home() {
         <h2 className="title">We&apos;re a woman-first fertility service.</h2>
         <p className="subtitle">
           We’re run by by a team of WoMen for women. Our mission is to educate,
-          prioritize, and match egg donors and potential families in a totally
-          transparent, step-by-step process.
+          prioritize, and match Egg, Embryo, and Surrogacy donors and potential
+          families in a totally transparent, step-by-step process.
         </p>
-        <Button href="/account/signup" primary>
+        <Button href="/become-a-donor" primary>
           Got Eggs?
         </Button>
-        <Button href="/">Learn More</Button>
+        <Button href="/about-us">Learn More</Button>
         <style jsx>{`
           .Index {
             padding: 50px 20px;
