@@ -46,6 +46,7 @@ const AboutUs = () => {
         smash the patriarchy.
       </div>
       <div className="subtitle">
+        <div>For women everywhere,</div>
         Victoria, Philihp, and the rest of the team
       </div>
 
