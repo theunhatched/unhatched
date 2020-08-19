@@ -1,11 +1,6 @@
 import { gql, ApolloServer } from 'apollo-server-micro'
-import knex from 'knex'
 import Cors from 'micro-cors'
-
-const db = knex({
-  client: 'pg',
-  connection: process.env.PG_CONNECTION_STRING,
-})
+import db from '../../lib/db'
 
 const typeDefs = gql`
   type Query {
