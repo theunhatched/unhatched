@@ -1,5 +1,6 @@
 import { gql, ApolloServer } from 'apollo-server-micro'
 import knex from 'knex'
+import Cors from 'micro-cors'
 
 const db = knex({
   client: 'pg',
@@ -48,4 +49,6 @@ export const config = {
   },
 }
 
-export default handler
+export default Cors({
+  allowMethods: ['GET', 'POST', 'OPTIONS'],
+})(handler)

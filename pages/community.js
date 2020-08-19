@@ -2,6 +2,11 @@ import React from 'react'
 import Layout from '../components/layout'
 import { useFetchUser } from '../lib/user'
 
+const getDonors = async (path) => {
+  const res = await fetch(path)
+  return res.json()
+}
+
 const Community = () => {
   const { user, loading } = useFetchUser()
 
