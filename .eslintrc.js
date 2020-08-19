@@ -13,5 +13,6 @@ module.exports = {
         aspects: ['invalidHref', 'preferButton'],
       },
     ],
+    'unicorn/filename-case': 'off',
   },
 }
