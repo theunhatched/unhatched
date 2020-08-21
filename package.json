@@ -6,6 +6,7 @@
     "build": "next build",
     "db:migrate": "knex migrate:latest",
     "db:rollback": "knex migrate:rollback",
+    "db:seed": "knex seed:run",
     "dev": "NODE_OPTIONS='--inspect' next dev",
     "lint": "eslint .",
     "start": "next start",
