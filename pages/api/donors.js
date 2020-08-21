@@ -5,7 +5,6 @@ export default async (req, res) => {
     return res.status(200).json(req)
   }
 
-  const donors = await db.select('*').from('bepis')
-
+  const donors = await db.select('*').from('donors')
   return res.status(200).json(donors)
 }
