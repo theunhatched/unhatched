@@ -1,5 +1,5 @@
 import React from 'react'
-import { useFormik } from 'formik'
+import { Formik, Field } from 'formik'
 import Layout from '../components/layout'
 // import Input from '../components/form/input'
 // import Form from '../components/form/form'
@@ -8,29 +8,23 @@ import { useFetchUser } from '../lib/user'
 import load from '../lib/load'
 
 const AddDonorForm = () => {
-  const formik = useFormik({
-    initialValues: {
-      name: 'alice',
-    },
-    onSubmit: (values) => {
-      console.log(JSON.stringify(values))
-    },
-  })
-
   return (
-    <form onSubmit={formik.handleSubmit}>
-      <label htmlFor="name">
-        Name
-        <input
-          id="name"
-          name="name"
-          type="text"
-          onChange={formik.handleChange}
-          value={formik.values.name}
-        />
-      </label>
-      <button type="submit">Add</button>
-    </form>
+    <Formik
+      initialValues={{ name: 'alice' }}
+      onSubmit={async (values) => {
+        await fetch('/api/donors/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(values),
+        })
+      }}
+    >
+      {({ handleSubmit }) => (
+        <form onSubmit={handleSubmit}>
+          <Field name="name" />
+        </form>
+      )}
+    </Formik>
   )
 }
 
