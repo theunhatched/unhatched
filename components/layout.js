@@ -11,6 +11,7 @@ const Layout = ({ user, loading, style, children }) => (
       <UserProvider value={{ user, loading }}>
         <Head>
           <title>Unhatched</title>
+          <link href="http://www.theunhatched.com" rel="canonical" />
           <link rel="icon" href="/favicon.ico" />
           <link
             rel="stylesheet"
