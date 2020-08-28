@@ -20,6 +20,7 @@
     "classnames": "2.2.6",
     "dataloader": "2.0.0",
     "dotenv": "8.2.0",
+    "formik": "^2.1.5",
     "isomorphic-unfetch": "3.0.0",
     "knex": "0.21.5",
     "micro-cors": "0.1.1",
