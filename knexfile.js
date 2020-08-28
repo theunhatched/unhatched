@@ -8,4 +8,9 @@ const config = {
 module.exports = {
   development: config,
   production: config,
+  test: {
+    client: 'sqlite3',
+    connection: ':memory:',
+    useNullAsDefault: true,
+  },
 }
