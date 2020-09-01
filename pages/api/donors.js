@@ -18,13 +18,15 @@ const get = async (_req, res) => {
 }
 
 export default async (req, res) => {
-  switch (req.method) {
+  const { method /* query: { name } */ } = req
+  switch (method) {
     case 'GET':
       return get(req, res)
     case 'POST':
       return post(req, res)
     default:
       // Method Not Allowed
-      return res.status(405).end()
+      res.setHeader('Allow', ['GET', 'POST'])
+      return res.status(405).end(`Method ${method} Not Allowed`)
   }
 }
