@@ -1,3 +1,5 @@
 import React from 'react'
 
-export default () => <></>
+const SignedInDonor = () => <></>
+
+export default SignedInDonor
