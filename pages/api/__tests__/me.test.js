@@ -6,7 +6,7 @@ describe('auth0', () => {
     expect.assertions(1)
     const handleProfile = jest.fn()
     auth0.default = { handleProfile }
-    me('REQ', 'RES')
+    me()
     expect(handleProfile).toHaveBeenCalled()
   })
 })
