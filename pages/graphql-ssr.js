@@ -1,15 +1,16 @@
-import React from 'react'
 import Layout from '../components/layout'
+import { withApollo } from '../lib/apollo'
+import UserList from '../components/users'
 import { useFetchUser } from '../lib/user'
 
-const Dashboard = () => {
+const SSR = () => {
   const { user, loading } = useFetchUser()
-
   return (
     <Layout user={user} loading={loading}>
-      <h2>Dashboard</h2>
+      <h1>SSR</h1>
+      <UserList />
     </Layout>
   )
 }
 
-export default Dashboard
+export default withApollo(SSR)

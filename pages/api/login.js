@@ -1,10 +1,10 @@
 import auth0 from '../../lib/auth0'
 
-export default async function login(request, response) {
+export default async function login(req, res) {
   try {
-    await auth0(request).handleLogin(request, response)
+    await auth0.handleLogin(req, res)
   } catch (error) {
     console.error(error)
-    response.status(error.status || 500).end(error.message)
+    res.status(error.status || 500).end(error.message)
   }
 }
