@@ -1,23 +1,41 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 // This import is only needed when checking authentication status directly from getInitialProps
 import auth0 from '../../lib/auth0'
 import { fetchUser } from '../../lib/user'
 import Layout from '../../components/layout'
 
-function Session({ user }) {
+const Session = ({ user }) => {
+  const { picture, nickname, name } = user
   return (
     <Layout user={user}>
       <h1>Session</h1>
 
       <div>
         <h3>Session (server rendered)</h3>
-        <img src={user.picture} alt="user picture" />
-        <p>nickname: {user.nickname}</p>
-        <p>name: {user.name}</p>
+        <img src={picture} alt="user" />
+        <p>nickname: {nickname}</p>
+        <p>name: {name}</p>
       </div>
     </Layout>
   )
+}
+
+Session.propTypes = {
+  user: PropTypes.shape({
+    picture: PropTypes.string.isRequired,
+    nickname: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+  }),
+}
+
+Session.defaultProps = {
+  user: {
+    picture: undefined,
+    nickname: undefined,
+    name: undefined,
+  },
 }
 
 Session.getInitialProps = async ({ req, res }) => {
@@ -31,7 +49,7 @@ Session.getInitialProps = async ({ req, res }) => {
         Location: '/api/login',
       })
       res.end()
-      return
+      return { user: undefined }
     }
     return { user }
   }
