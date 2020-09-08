@@ -3,10 +3,10 @@ name: tests
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -25,7 +25,7 @@ jobs:
           SESSION_COOKIE_SECRET: ________NEEDED_FOR_BUILD________
       - run: npm run test:coverage
       - name: Coveralls
-        uses: coverallsapp/github-action@master
+        uses: coverallsapp/github-action@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
   lint:
