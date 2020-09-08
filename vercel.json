@@ -2,13 +2,13 @@
   "version": 2,
   "build": {
     "env": {
-      "AUTH0_DOMAIN": "@AUTH0_DOMAIN",
-      "AUTH0_CLIENT_ID": "@AUTH0_CLIENT_ID",
-      "AUTH0_CLIENT_SECRET": "@AUTH0_CLIENT_SECRET",
+      "AUTH0_DOMAIN": "@auth0-domain",
+      "AUTH0_CLIENT_ID": "@auth0-client-id",
+      "AUTH0_CLIENT_SECRET": "@auth0-client-secret",
       "REDIRECT_URI": "https://www.theunhatched.com/api/callback",
       "POST_LOGOUT_REDIRECT_URI": "https://www.theunhatched.com/",
-      "SESSION_COOKIE_SECRET": "@SESSION_COOKIE_SECRET",
-      "HASURA_GRAPHQL_URL": "@HASURA_GRAPHQL_URL",
+      "SESSION_COOKIE_SECRET": "@session-cookie-secret",
+      "HASURA_GRAPHQL_URL": "@hasura-graphql-url",
       "SECURE_COOKIE": "true"
     }
   }
