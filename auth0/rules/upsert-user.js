@@ -1,15 +1,15 @@
-function (user, context, callback) {
+function upsertUser(user, context, callback) {
   const userId = user.user_id
 
   const QUERY_BODY = {
-    query: `mutation($userId: String!){
-      insert_users(
+    query: `mutation($userId: bpchar!){
+      insert_user(
           objects: [{ auth0_user_id: $userId }],
           on_conflict: { constraint: user_auth0_user_id_key, update_columns: [] }) {
         affected_rows
       }
     }`,
-    variables: { userId: userId },
+    variables: { userId },
   }
 
   request.post(

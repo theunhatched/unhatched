@@ -15,4 +15,5 @@ module.exports = {
     ],
     'unicorn/filename-case': 'off',
   },
+  ignorePatterns: ['auth0/rules/*.js'],
 }
