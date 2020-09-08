@@ -1,9 +1,9 @@
 import React from 'react'
 
 // This import is only needed when checking authentication status directly from getInitialProps
-// import auth0 from '../lib/auth0'
-import { useFetchUser } from '../lib/user'
-import Layout from '../components/layout'
+// import auth0 from '../../lib/auth0'
+import { useFetchUser } from '../../lib/user'
+import Layout from '../../components/layout'
 
 function SessionCard({ user }) {
   return (
