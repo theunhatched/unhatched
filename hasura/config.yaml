@@ -1,4 +1,4 @@
 version: 2
 admin_secret: abd123$$
-endpoint: https://desired-starfish-14.hasura.app/
+endpoint: https://communal-starling-83.hasura.app/
 metadata_directory: metadata
