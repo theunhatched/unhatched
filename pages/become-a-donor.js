@@ -31,14 +31,12 @@ const BecomeADonor = () => {
         .Index {
           padding: 50px 20px;
         }
-
         .donorTitle {
           position: absolute;
           width: 426px;
           height: 43px;
           left: 118px;
           top: 173px;
-
           font-family: Playfair Display;
           font-style: normal;
           font-weight: 900;
@@ -53,17 +51,14 @@ const BecomeADonor = () => {
           height: 87px;
           left: 118px;
           top: 220px;
-
           font-family: Ruda;
           font-style: normal;
           font-weight: normal;
           font-size: 16px;
           line-height: 180%;
           /* or 29px */
-
           color: rgba(0, 0, 0, 0.6);
         }
-
         .deliverSubtitle {
           /* About you */
           position: absolute;
@@ -71,14 +66,12 @@ const BecomeADonor = () => {
           height: 32px;
           left: 117px;
           top: 305px;
-
           font-family: Ruda;
           font-style: normal;
           font-weight: bold;
           font-size: 18px;
           line-height: 180%;
           /* or 32px */
-
           color: rgba(0, 0, 0, 0.87);
         }
         .geneticProfileSubtitle {
@@ -88,30 +81,25 @@ const BecomeADonor = () => {
           height: 32px;
           left: 117px;
           top: 450px;
-
           font-family: Ruda;
           font-style: normal;
           font-weight: bold;
           font-size: 18px;
           line-height: 180%;
           /* or 32px */
-
           color: rgba(0, 0, 0, 0.87);
         }
-
         .geneticProfileTable {
           position: absolute;
           width: 1190px;
           height: 833px;
           left: 0;
           top: 50px;
-
           background: #ffffff;
           border: 1.5px solid #d9d9d9;
           box-sizing: border-box;
           border-radius: 4px;
         }
-
         .tipFont {
           font-family: Ruda;
           font-style: normal;
@@ -119,9 +107,7 @@ const BecomeADonor = () => {
           font-size: 16px;
           line-height: 14px;
           /* identical to box height, or 87% */
-
           letter-spacing: 0.01em;
-
           color: rgba(0, 0, 0, 0.6);
         }
       `}</style>

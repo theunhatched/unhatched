@@ -1,0 +1,4 @@
+version: 2
+admin_secret: abd123$$
+endpoint: https://communal-starling-83.hasura.app/
+metadata_directory: metadata

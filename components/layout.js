@@ -3,30 +3,27 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 import Header from './header'
 import Footer from './footer'
-import { UserProvider } from '../lib/user'
 
-const Layout = ({ user, loading, style, children }) => (
+const Layout = ({ style, children }) => (
   <>
     <div className="Layout">
-      <UserProvider value={{ user, loading }}>
-        <Head>
-          <title>Unhatched</title>
-          <link href="http://www.theunhatched.com" rel="canonical" />
-          <link rel="icon" href="/favicon.ico" />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Oswald&family=Ruda&family=Playfair+display"
-          />
-          <meta charSet="utf-8" />
-          <meta
-            name="viewport"
-            content="width=device-width,minimum-scale=1,initial-scale=1"
-          />
-        </Head>
-        <Header style={style} />
-        <div className="Content">{children}</div>
-        <Footer style={style} />
-      </UserProvider>
+      <Head>
+        <title>Unhatched</title>
+        <link href="http://www.theunhatched.com" rel="canonical" />
+        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Oswald&family=Ruda&family=Playfair+display"
+        />
+        <meta charSet="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width,minimum-scale=1,initial-scale=1"
+        />
+      </Head>
+      <Header style={style} />
+      <div className="Content">{children}</div>
+      <Footer style={style} />
     </div>
     <style jsx>{`
       .Layout {
@@ -63,8 +60,6 @@ const Layout = ({ user, loading, style, children }) => (
 )
 
 Layout.propTypes = {
-  user: PropTypes.any,
-  loading: PropTypes.bool,
   children: PropTypes.any.isRequired,
   style: PropTypes.shape({
     backgroundColor: PropTypes.string,
@@ -72,8 +67,6 @@ Layout.propTypes = {
 }
 
 Layout.defaultProps = {
-  user: undefined,
-  loading: false,
   style: {
     backgroundColor: undefined,
   },

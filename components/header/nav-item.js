@@ -14,7 +14,6 @@ const NavItem = ({ href, children, cta }) => (
         color: #0d1c66;
         margin: 18px 0px;
         padding: 9px 38px;
-
         font-family: Oswald;
         font-style: normal;
         font-weight: normal;

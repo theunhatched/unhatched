@@ -2,13 +2,10 @@ import React from 'react'
 
 import HeroLayout from '../components/hero-layout'
 import Button from '../components/button'
-import { useFetchUser } from '../lib/user'
 
 export default function Home() {
-  const { user, loading } = useFetchUser()
-
   return (
-    <HeroLayout user={user} loading={loading}>
+    <HeroLayout>
       <div className="Index">
         {/* <img src="/woman-illustration.svg" className="illustration" alt="" /> */}
         <h2 className="title">We&apos;re a woman-first fertility service.</h2>
@@ -25,7 +22,6 @@ export default function Home() {
           .Index {
             padding: 50px 20px;
           }
-
           .title {
             /* We’re a woman-first fertility service. */
             font-family: Playfair Display;

@@ -1,14 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
-import { useUser } from '../../lib/user'
+import { useFetchUser } from '../../lib/user'
 
 import SignedOut from './signed-out'
-import SignedInDonor from './signed-in-donor'
 import SignedInUser from './signed-in-user'
 
 const Header = ({ style }) => {
-  const { user, loading } = useUser()
+  const { user, loading } = useFetchUser()
   return (
     <div className="Header">
       <h1>
@@ -20,7 +19,6 @@ const Header = ({ style }) => {
       </h1>
 
       {(!loading && !user && <SignedOut />) ||
-        (user?.donor && <SignedInDonor user={user} />) ||
         (!user?.donor && <SignedInUser user={user} />)}
       <style jsx>{`
         .Header {
@@ -40,14 +38,12 @@ const Header = ({ style }) => {
           font-weight: 900;
           font-size: 25px;
           color: #0d1c66;
-
           font-family: Playfair Display;
           font-style: normal;
           font-weight: 900;
           font-size: 30px;
           line-height: 40px;
           /* identical to box height */
-
           color: #0d1c66;
         }
       `}</style>

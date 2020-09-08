@@ -1,12 +1,9 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { useFetchUser } from '../lib/user'
 
 const AboutUs = () => {
-  const { user, loading } = useFetchUser()
-
   return (
-    <Layout user={user} loading={loading}>
+    <Layout>
       <h2 className="title">Our Story</h2>
       <div className="subtitle">
         We&apos;re a team of Feminists who are out to change the world, who
@@ -54,7 +51,6 @@ const AboutUs = () => {
         .Index {
           padding: 50px 20px;
         }
-
         .title {
           /* We’re a woman-first fertility service. */
           font-family: Playfair Display;

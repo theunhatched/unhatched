@@ -12,37 +12,30 @@ const Button = ({ children, href, primary }) => (
         .default {
           margin-left: 30px;
           padding: 10px 50px;
-
           background: #ffd7d7;
           border: 1.5px solid #fdfdfd;
           box-sizing: border-box;
           border-radius: 4px;
-
           font-family: Oswald;
           font-style: normal;
           font-weight: normal;
           font-size: 21px;
           line-height: 31px;
-
           color: #0d1c66;
-
           width: 217px;
           height: 57px;
         }
         .primary {
           padding: 10px 50px;
-
           color: #fdfdfd;
           background: #0d1c66;
           box-shadow: 0px 4px 14px rgba(13, 28, 102, 0.38);
           border-radius: 4px;
-
           font-family: Oswald;
           font-style: normal;
           font-weight: normal;
           font-size: 21px;
           line-height: 31px;
-
           width: 217px;
           height: 57px;
         }

@@ -9,7 +9,7 @@ const SignedOut = () => (
       Become a Donor
     </NavItem>
     <NavItem href="/api/login">Log In</NavItem>
-    <NavItem href="/api/signup">Sign up for Free</NavItem>
+    <NavItem href="/api/login">Sign up for Free</NavItem>
   </NavList>
 )
 
