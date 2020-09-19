@@ -22,6 +22,18 @@ v14.4.0
 ❯ npm install
 ```
 
+4. Download, install, and setup Docker.
+
+```
+❯ brew cask install docker
+```
+
+5. Start Posgres and Hasura with Docker. This will download containers listed in `docker-compose.yaml`. The `-d` here runs this as a daemon.
+
+```
+❯ docker-compose up -d
+```
+
 4. Now run the development server.
 
 ```bash

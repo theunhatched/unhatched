@@ -4,7 +4,8 @@
     "mgmcdermott.vscode-language-babel",
     "jpoissonnier.vscode-styled-components",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "ms-azuretools.vscode-docker"
   ],
   "unwantedRecommendations": []
 }

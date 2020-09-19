@@ -1,0 +1,36 @@
+Epics:
+
+Message board
+- create some stub threads
+- create some stub replies
+- create a view for messages, model it after Gmail threads
+- create an endpoint for making a thread
+- create an endpoint for responding
+
+Resources
+- for donors
+  - what to expect
+- for sponsors
+  - what to expect
+
+GraphQL conduit
+- read records
+  - view donor, generates static PDPs with getStaticPaths (with fallback: true)
+  - view donor, pulls data with getStaticProps
+- write new records
+- update from mutations
+
+Become a donor
+- create donor card
+  - phone number
+  - markdown of page for donor
+- search donor cards
+- verification flow
+  - contact the donor, excite them
+  - verify details
+  - set expectations
+
+Become a Sponsor
+- pay money to Unhatched for escrow
+- hold money for donor
+- communicate with donor
