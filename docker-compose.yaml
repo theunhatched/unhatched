@@ -8,7 +8,12 @@ services:
     environment:
       POSTGRES_PASSWORD: postgrespassword
   graphql-engine:
-    image: hasura/graphql-engine:v1.3.2
+    image: hasura/graphql-engine:v1.3.2.cli-migrations-v2
+    volumes:
+    # TODO: this needs to happen... but there's something wrong with it because my local docker
+    # doesn't boot up with migrations. Also, how is this supposed to work with Auth0?
+    #      - ./migrations:/hasura-migrations
+    #      - ./metadata:/hasura-metadata
     ports:
       - '8080:8080'
     depends_on:
