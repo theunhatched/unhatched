@@ -43,7 +43,7 @@ Session.getInitialProps = async ({ req, res }) => {
   // However in general you might want to call API Routes to fetch data
   // An example of directly checking authentication:
   if (typeof window === 'undefined') {
-    const { user } = await auth0.getSession(req)
+    const { user } = await auth0().getSession(req)
     if (!user) {
       res.writeHead(302, {
         Location: '/api/login',

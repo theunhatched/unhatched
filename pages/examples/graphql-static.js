@@ -1,6 +1,5 @@
 import Layout from '../../components/layout'
 import { withApollo } from '../../lib/apollo'
-// import UserList from '../../components/users'
 import { useFetchUser } from '../../lib/user'
 
 const UserList = () => <div>Userlist</div>
