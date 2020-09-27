@@ -22,6 +22,7 @@ const QUERY = gql`
 const Dashboard = () => {
   const { loading: userLoading } = useFetchUser()
   const { loading: donorLoading, data } = useQuery(QUERY)
+
   if (userLoading || donorLoading) {
     return <div>...</div>
   }

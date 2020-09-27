@@ -1,43 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Head from 'next/head'
+import Head from './head'
 import Header from './header'
 import Footer from './footer'
 
 const Layout = ({ style, children }) => (
   <>
     <div className="Layout">
-      <Head>
-        <title>Unhatched</title>
-        <link href="http://www.theunhatched.com" rel="canonical" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Oswald&family=Ruda&family=Playfair+display"
-        />
-        <meta charSet="utf-8" />
-        <meta
-          name="viewport"
-          content="width=device-width,minimum-scale=1,initial-scale=1"
-        />
-      </Head>
+      <Head />
       <Header style={style} />
       <div className="Content">{children}</div>
       <Footer style={style} />
