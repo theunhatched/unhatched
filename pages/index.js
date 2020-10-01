@@ -1,13 +1,13 @@
 import React from 'react'
 
-import { useFetchUser } from '../lib/user'
-import { withApollo } from '../lib/withApollo'
+import HeroLayout from '../components/hero-layout'
 
-const Index = () => {
-  const { user, loading } = useFetchUser()
-  if (loading) return <>loading</>
-  if (!loading && !user) return <>logged out</>
-  return <div>Hello</div>
+export default function Home() {
+  return (
+    <HeroLayout>
+      <div className="Index">
+        <img src="/woman-illustration.svg" className="illustration" alt="" />
+      </div>
+    </HeroLayout>
+  )
 }
-
-export default Index
