@@ -4,7 +4,6 @@ module.exports = {
     browser: true,
   },
   rules: {
-    'react/forbid-prop-types': 'off',
     'jsx-a11y/anchor-is-valid': [
       'error',
       {
@@ -13,6 +12,10 @@ module.exports = {
         aspects: ['invalidHref', 'preferButton'],
       },
     ],
+    'no-underscore-dangle': 'off',
+    'react/forbid-prop-types': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'react/prop-types': 'off', // turn off now, turn on maybe never?
     'unicorn/filename-case': 'off',
   },
   ignorePatterns: [
