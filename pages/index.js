@@ -1,13 +1,12 @@
 import React from 'react'
 
-import HeroLayout from '../components/hero-layout'
-
 export default function Home() {
   return (
-    <HeroLayout>
-      <div className="Index">
-        <img src="/woman-illustration.svg" className="illustration" alt="" />
-      </div>
-    </HeroLayout>
+    <div className="Index">
+      <center>
+        <h1>We&apos;re coming soon...</h1>
+      </center>
+      <img src="/woman-illustration.svg" className="illustration" alt="" />
+    </div>
   )
 }
