@@ -23,17 +23,17 @@ const Dashboard = () => {
   const { user, loading: userLoading } = useFetchUser()
   const { data, loading: donorLoading, error } = useQuery(QUERY)
 
-  // if (userLoading || donorLoading) {
-  if (userLoading) {
-    return <div>user loading</div>
-  }
-  if (donorLoading) {
-    return <div>donor loading</div>
-  }
-  if (error) {
-    console.error(error)
-    return <div>{error}</div>
-  }
+  // // if (userLoading || donorLoading) {
+  // if (userLoading) {
+  //   return <div>user loading</div>
+  // }
+  // if (donorLoading) {
+  //   return <div>donor loading</div>
+  // }
+  // if (error) {
+  //   console.error(error)
+  //   return <div>{error}</div>
+  // }
 
   return (
     <>
