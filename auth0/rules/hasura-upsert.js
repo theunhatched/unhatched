@@ -4,7 +4,6 @@ function (user, context, callback) {
   
   const admin_secret = configuration.ADMIN_SECRET;
   const url = configuration.HASURA_GRAPHQL_URL;
-  console.log({admin_secret, url});
   const query = `mutation($userId: String!, $nickname: String) {
     insert_users(objects: [{
       id: $userId, name: $nickname
@@ -22,7 +21,6 @@ function (user, context, callback) {
         variables: variables
       })
   };
-  // console.log(post);
   request.post(post, function(error, response, body){
        console.log(body);
        callback(null, user, context);

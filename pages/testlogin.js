@@ -1,5 +1,6 @@
 import React from 'react'
 import Router from 'next/router'
+import Link from 'next/link'
 
 import { withApollo } from '../lib/withApollo'
 import { useFetchUser } from '../lib/user'
@@ -11,6 +12,23 @@ const IndexPage = () => {
   }
   return (
     <div>
+      <ul>
+        <li>
+          <Link href="/testlogin">
+            <a>testlogin</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/api/logout">
+            <a>testlogout</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/testhasura">
+            <a>testhasura</a>
+          </Link>
+        </li>
+      </ul>
       <button
         type="button"
         onClick={() => {
