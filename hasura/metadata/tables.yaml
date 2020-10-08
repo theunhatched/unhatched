@@ -1,1 +1,103 @@
-[]
+- table:
+    schema: public
+    name: donors
+  insert_permissions:
+  - role: user
+    permission:
+      check:
+        user_id:
+          _eq: X-Hasura-User-Id
+      columns:
+      - id
+      - created_at
+      - updated_at
+      - user_id
+      - hair_color
+      - eye_color
+      - birthdate
+      - profile
+      backend_only: false
+  select_permissions:
+  - role: user
+    permission:
+      columns:
+      - birthdate
+      - profile
+      - created_at
+      - updated_at
+      - id
+      - user_id
+      - eye_color
+      - hair_color
+      filter: {}
+  update_permissions:
+  - role: user
+    permission:
+      columns:
+      - birthdate
+      - profile
+      - created_at
+      - updated_at
+      - id
+      - user_id
+      - eye_color
+      - hair_color
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
+      check:
+        user_id:
+          _eq: X-Hasura-User-Id
+  delete_permissions:
+  - role: user
+    permission:
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
+- table:
+    schema: public
+    name: users
+  insert_permissions:
+  - role: user
+    permission:
+      check:
+        id:
+          _eq: X-Hasura-User-Id
+      columns:
+      - created_at
+      - last_seen_at
+      - updated_at
+      - id
+      - name
+      backend_only: false
+  select_permissions:
+  - role: user
+    permission:
+      columns:
+      - created_at
+      - last_seen_at
+      - updated_at
+      - id
+      - name
+      filter: {}
+  update_permissions:
+  - role: user
+    permission:
+      columns:
+      - created_at
+      - last_seen_at
+      - updated_at
+      - id
+      - name
+      filter:
+        id:
+          _eq: X-Hasura-User-Id
+      check:
+        id:
+          _eq: X-Hasura-User-Id
+  delete_permissions:
+  - role: user
+    permission:
+      filter:
+        id:
+          _eq: X-Hasura-User-Id
