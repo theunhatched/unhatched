@@ -4,3 +4,6 @@ CREATE TABLE public.donors (
     updated_at timestamp with time zone DEFAULT now() NOT NULL,
     user_id text NOT NULL
 );
+
+ALTER TABLE ONLY public.donors
+    ADD CONSTRAINT donors_pkey PRIMARY KEY (id);
