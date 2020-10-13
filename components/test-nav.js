@@ -9,6 +9,11 @@ const TestNav = () => (
       </Link>
     </li>
     <li>
+      <Link href="/testsignup">
+        <a>testsignup</a>
+      </Link>
+    </li>
+    <li>
       <Link href="/api/logout">
         <a>testlogout</a>
       </Link>
