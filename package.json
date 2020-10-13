@@ -13,7 +13,7 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
-    "@apollo/client": "3.2.3",
+    "@apollo/client": "3.2.4",
     "@apollo/react-hooks": "4.0.0",
     "@apollo/react-ssr": "4.0.0",
     "@auth0/nextjs-auth0": "0.10.0",
