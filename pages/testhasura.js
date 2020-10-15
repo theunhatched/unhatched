@@ -1,6 +1,5 @@
 import React from 'react'
-import gql from 'graphql-tag'
-import { useQuery } from '@apollo/react-hooks'
+import { gql, useQuery } from '@apollo/client'
 import TestNav from '../components/test-nav'
 import { withApollo } from '../lib/withApollo'
 import { useFetchUser } from '../lib/user'

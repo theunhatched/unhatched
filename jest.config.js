@@ -2,7 +2,11 @@ module.exports = {
   clearMocks: true,
   collectCoverageFrom: ['pages/**/*.js', 'components/**/*.js'],
   coverageDirectory: 'coverage',
-  coveragePathIgnorePatterns: ['/node_modules/', 'setup-tests.js'],
+  coveragePathIgnorePatterns: [
+    '/node_modules/',
+    '/coverage/',
+    'setup-tests.js',
+  ],
   setupFilesAfterEnv: ['<rootDir>/setup-tests.js'],
   coverageReporters: ['json', 'lcov', 'text', 'text-summary'],
   transform: {
