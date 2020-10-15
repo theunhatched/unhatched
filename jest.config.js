@@ -5,9 +5,11 @@ module.exports = {
   coveragePathIgnorePatterns: [
     '/node_modules/',
     '/coverage/',
-    'setup-tests.js',
     '/pages/test*.js',
+    'setup-tests.js',
+    'setup-tests-env.js',
   ],
+  setupFiles: ['<rootDir>/setup-tests-env.js'],
   setupFilesAfterEnv: ['<rootDir>/setup-tests.js'],
   coverageReporters: ['json', 'lcov', 'text', 'text-summary'],
   transform: {
