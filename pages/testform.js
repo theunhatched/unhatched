@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import gql from 'graphql-tag'
-import { useMutation, useQuery } from '@apollo/react-hooks'
+import { gql, useMutation, useSubscription } from '@apollo/client'
 import TestNav from '../components/test-nav'
 import { withApollo } from '../lib/withApollo'
 import { useFetchUser } from '../lib/user'
@@ -28,7 +27,7 @@ const mutation = gql`
 `
 
 const query = gql`
-  query {
+  subscription {
     donors {
       id
       hair_color
@@ -53,12 +52,19 @@ const TestForm = () => {
   const [eyeColorInput, setEyeColor] = useState('Blue')
   const [birthdateInput, setBirthdate] = useState('1984-02-29')
 
-  const [addDonor] = useMutation(mutation)
+  const [
+    addDonor,
+    { loading: mutateLoading, error: mutateError },
+  ] = useMutation(mutation, {
+    onCompleted: (_data) => {
+      // console.log('onCompleted', data)
+    },
+  })
   const {
     loading: donorsLoading,
     error: donorsError,
     data: donorData,
-  } = useQuery(query)
+  } = useSubscription(query)
 
   if (userLoading) {
     return <div>user loading</div>
@@ -70,7 +76,10 @@ const TestForm = () => {
     return <div>{userError}</div>
   }
   if (donorsError) {
-    return <pre>{donorsError}</pre>
+    return <div>{donorsError}</div>
+  }
+  if (mutateError) {
+    return <div>{mutateError}</div>
   }
 
   return (
@@ -80,7 +89,6 @@ const TestForm = () => {
       <h1>Form</h1>
       <form
         onSubmit={(e) => {
-          console.log('submit')
           e.preventDefault()
           addDonor({
             variables: {
@@ -91,7 +99,6 @@ const TestForm = () => {
               birthdate: birthdateInput,
             },
           })
-          console.log('done')
         }}
       >
         <div>
@@ -135,6 +142,8 @@ const TestForm = () => {
           />
         </div>
         <input type="submit" value="Save" />
+        <br />
+        submitting: {mutateLoading}
       </form>
       <h3>Donors</h3>
       <table>
