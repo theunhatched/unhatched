@@ -6,6 +6,7 @@ module.exports = {
     '/node_modules/',
     '/coverage/',
     'setup-tests.js',
+    '/pages/test*.js',
   ],
   setupFilesAfterEnv: ['<rootDir>/setup-tests.js'],
   coverageReporters: ['json', 'lcov', 'text', 'text-summary'],
