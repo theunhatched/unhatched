@@ -1,4 +1,3 @@
-import fetch from 'isomorphic-unfetch'
 import config from '../../lib/auth0-config'
 
 export default async function signup(req, res) {
