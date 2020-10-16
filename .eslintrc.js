@@ -23,4 +23,15 @@ module.exports = {
     'pages/examples/*.js',
     'components/examples/*.js',
   ],
+  globals: {
+    $subject: 'readonly',
+    includeExamplesFor: 'readonly',
+    itBehavesLike: 'readonly',
+    its: 'readonly',
+    mount: 'readonly',
+    render: 'readonly',
+    shallow: 'readonly',
+    sharedExamplesFor: 'readonly',
+    subject: 'readonly',
+  },
 }

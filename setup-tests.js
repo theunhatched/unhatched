@@ -1,6 +1,10 @@
+import { configure } from 'enzyme'
+import EnzymeAdapter from 'enzyme-adapter-react-16'
+import enableHooks from 'jest-react-hooks-shallow'
 import 'bdd-lazy-var/global'
-import Enzyme from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
 
-// Configure Enzyme with React 16 adapter
-Enzyme.configure({ adapter: new Adapter() })
+configure({
+  adapter: new EnzymeAdapter(),
+})
+
+enableHooks(jest)

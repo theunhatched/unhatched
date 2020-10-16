@@ -1,5 +1,5 @@
-import http from 'http'
 import fetch from 'isomorphic-unfetch'
+import http from 'http'
 import listen from 'test-listen'
 import { apiResolver } from 'next/dist/next-server/server/api-utils'
 import handler from '../session'
