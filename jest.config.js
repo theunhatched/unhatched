@@ -11,7 +11,7 @@ module.exports = {
   ],
   setupFiles: ['<rootDir>/setup-tests-env.js'],
   setupFilesAfterEnv: [
-    // 'jest-enzyme',
+    'jest-enzyme',
     '<rootDir>/setup-tests.js',
     'bdd-lazy-var/global',
   ],
