@@ -1,6 +1,9 @@
 - table:
     schema: public
-    name: donors
+    name: disclosure_complete
+- table:
+    schema: public
+    name: disclosure_initial
   insert_permissions:
   - role: user
     permission:
@@ -8,46 +11,88 @@
         user_id:
           _eq: X-Hasura-User-Id
       columns:
+      - created_at
+      - updated_at
+      - id
+      - user_id
+      - birthdate
+      - commitments
+      - ethnicity
+      - eye_color
+      - generic_education
+      - generic_employment
+      - hair_color
+      - height
+      - passions
+      - religious_views
+      - talents
+      - weight
+      backend_only: false
+  select_permissions:
+  - role: anonymous
+    permission:
+      columns:
       - id
       - created_at
       - updated_at
       - user_id
-      - hair_color
-      - eye_color
+      - ethnicity
       - birthdate
-      - profile
-      backend_only: false
-  select_permissions:
+      - eye_color
+      - hair_color
+      - height
+      - weight
+      - generic_education
+      - generic_employment
+      - religious_views
+      - talents
+      - passions
+      - commitments
+      filter: {}
   - role: user
     permission:
       columns:
-      - birthdate
-      - profile
+      - id
       - created_at
       - updated_at
-      - id
       - user_id
+      - ethnicity
+      - birthdate
       - eye_color
       - hair_color
+      - height
+      - weight
+      - generic_education
+      - generic_employment
+      - religious_views
+      - talents
+      - passions
+      - commitments
       filter: {}
   update_permissions:
   - role: user
     permission:
       columns:
-      - birthdate
-      - profile
       - created_at
       - updated_at
       - id
       - user_id
+      - birthdate
+      - commitments
+      - ethnicity
       - eye_color
+      - generic_education
+      - generic_employment
       - hair_color
+      - height
+      - passions
+      - religious_views
+      - talents
+      - weight
       filter:
         user_id:
           _eq: X-Hasura-User-Id
-      check:
-        user_id:
-          _eq: X-Hasura-User-Id
+      check: null
   delete_permissions:
   - role: user
     permission:
@@ -56,7 +101,10 @@
           _eq: X-Hasura-User-Id
 - table:
     schema: public
-    name: users
+    name: disclosure_partial
+- table:
+    schema: public
+    name: user
   insert_permissions:
   - role: user
     permission:
@@ -71,6 +119,11 @@
       - name
       backend_only: false
   select_permissions:
+  - role: anonymous
+    permission:
+      columns:
+      - id
+      filter: {}
   - role: user
     permission:
       columns:
