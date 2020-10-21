@@ -1,0 +1,401 @@
+- table:
+    schema: public
+    name: disclosure
+  object_relationships:
+  - name: user
+    using:
+      foreign_key_constraint_on: user_id
+  insert_permissions:
+  - role: user
+    permission:
+      check:
+        user_id:
+          _eq: X-Hasura-User-Id
+      columns:
+      - created_at
+      - updated_at
+      - disclosure_id
+      - user_id
+      - achievements
+      - birthdate
+      - circle_of_friends
+      - commitments
+      - detailed_commitments
+      - detailed_employment
+      - detailed_ethnicity
+      - detailed_passions
+      - detailed_talents
+      - education
+      - employment
+      - ethnicity
+      - eye_color
+      - genetic_reports
+      - hair_color
+      - height
+      - letters_of_recommendation
+      - life_milestones
+      - passions
+      - philosophical_views
+      - photo_album
+      - physiological_reports
+      - religion
+      - religious_views
+      - talents
+      - weight
+      backend_only: false
+  select_permissions:
+  - role: user
+    permission:
+      columns:
+      - created_at
+      - updated_at
+      - disclosure_id
+      - user_id
+      - achievements
+      - birthdate
+      - circle_of_friends
+      - commitments
+      - detailed_commitments
+      - detailed_employment
+      - detailed_ethnicity
+      - detailed_passions
+      - detailed_talents
+      - education
+      - employment
+      - ethnicity
+      - eye_color
+      - genetic_reports
+      - hair_color
+      - height
+      - letters_of_recommendation
+      - life_milestones
+      - passions
+      - philosophical_views
+      - photo_album
+      - physiological_reports
+      - religion
+      - religious_views
+      - talents
+      - weight
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
+  update_permissions:
+  - role: user
+    permission:
+      columns:
+      - achievements
+      - birthdate
+      - circle_of_friends
+      - commitments
+      - detailed_commitments
+      - detailed_employment
+      - detailed_ethnicity
+      - detailed_passions
+      - detailed_talents
+      - disclosure_id
+      - education
+      - employment
+      - ethnicity
+      - eye_color
+      - genetic_reports
+      - hair_color
+      - height
+      - letters_of_recommendation
+      - life_milestones
+      - passions
+      - philosophical_views
+      - photo_album
+      - physiological_reports
+      - religion
+      - religious_views
+      - talents
+      - updated_at
+      - user_id
+      - weight
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
+      check: null
+  delete_permissions:
+  - role: user
+    permission:
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
+- table:
+    schema: public
+    name: disclosure_complete
+  insert_permissions:
+  - role: user
+    permission:
+      check:
+        user_id:
+          _eq: X-Hasura-User-Id
+      columns:
+      - created_at
+      - updated_at
+      - disclosure_id
+      - user_id
+      - genetic_reports
+      - letters_of_recommendation
+      - physiological_reports
+      backend_only: false
+  select_permissions:
+  - role: user
+    permission:
+      columns:
+      - created_at
+      - updated_at
+      - disclosure_id
+      - user_id
+      - genetic_reports
+      - letters_of_recommendation
+      - physiological_reports
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
+  update_permissions:
+  - role: user
+    permission:
+      columns:
+      - disclosure_id
+      - genetic_reports
+      - letters_of_recommendation
+      - physiological_reports
+      - updated_at
+      - user_id
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
+      check:
+        user_id:
+          _eq: X-Hasura-User-Id
+  delete_permissions:
+  - role: user
+    permission:
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
+- table:
+    schema: public
+    name: disclosure_initial
+  insert_permissions:
+  - role: user
+    permission:
+      check:
+        user_id:
+          _eq: X-Hasura-User-Id
+      columns:
+      - disclosure_id
+      - created_at
+      - updated_at
+      - user_id
+      - birthdate
+      - ethnicity
+      - eye_color
+      - hair_color
+      - height
+      - weight
+      - education
+      - employment
+      - religion
+      - talents
+      - passions
+      - commitments
+      backend_only: false
+  select_permissions:
+  - role: anonymous
+    permission:
+      columns:
+      - disclosure_id
+      - created_at
+      - updated_at
+      - user_id
+      - birthdate
+      - ethnicity
+      - eye_color
+      - hair_color
+      - height
+      - weight
+      - education
+      - employment
+      - religion
+      - talents
+      - passions
+      - commitments
+      filter: {}
+  - role: user
+    permission:
+      columns:
+      - disclosure_id
+      - created_at
+      - updated_at
+      - user_id
+      - birthdate
+      - ethnicity
+      - eye_color
+      - hair_color
+      - height
+      - weight
+      - education
+      - employment
+      - religion
+      - talents
+      - passions
+      - commitments
+      filter: {}
+  update_permissions:
+  - role: user
+    permission:
+      columns:
+      - birthdate
+      - commitments
+      - disclosure_id
+      - education
+      - employment
+      - ethnicity
+      - eye_color
+      - hair_color
+      - height
+      - passions
+      - religion
+      - talents
+      - updated_at
+      - user_id
+      - weight
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
+      check:
+        user_id:
+          _eq: X-Hasura-User-Id
+  delete_permissions:
+  - role: user
+    permission:
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
+- table:
+    schema: public
+    name: disclosure_partial
+  insert_permissions:
+  - role: user
+    permission:
+      check:
+        user_id:
+          _eq: X-Hasura-User-Id
+      columns: []
+      backend_only: false
+  select_permissions:
+  - role: user
+    permission:
+      columns:
+      - created_at
+      - updated_at
+      - disclosure_id
+      - user_id
+      - achievements
+      - circle_of_friends
+      - detailed_commitments
+      - detailed_employment
+      - detailed_ethnicity
+      - detailed_passions
+      - detailed_talents
+      - life_milestones
+      - philosophical_views
+      - photo_album
+      - religious_views
+      filter: {}
+  update_permissions:
+  - role: user
+    permission:
+      columns:
+      - achievements
+      - circle_of_friends
+      - detailed_commitments
+      - detailed_employment
+      - detailed_ethnicity
+      - detailed_passions
+      - detailed_talents
+      - disclosure_id
+      - life_milestones
+      - philosophical_views
+      - photo_album
+      - religious_views
+      - updated_at
+      - user_id
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
+      check:
+        user_id:
+          _eq: X-Hasura-User-Id
+  delete_permissions:
+  - role: user
+    permission:
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
+- table:
+    schema: public
+    name: user
+  array_relationships:
+  - name: disclosures
+    using:
+      foreign_key_constraint_on:
+        column: user_id
+        table:
+          schema: public
+          name: disclosure
+  insert_permissions:
+  - role: user
+    permission:
+      check:
+        id:
+          _eq: X-Hasura-User-Id
+      columns:
+      - auth0_id
+      - created_at
+      - id
+      - last_seen_at
+      - name
+      - updated_at
+      backend_only: false
+  select_permissions:
+  - role: anonymous
+    permission:
+      columns:
+      - id
+      filter: {}
+  - role: user
+    permission:
+      columns:
+      - auth0_id
+      - created_at
+      - id
+      - last_seen_at
+      - name
+      - updated_at
+      filter: {}
+  update_permissions:
+  - role: user
+    permission:
+      columns:
+      - auth0_id
+      - id
+      - last_seen_at
+      - name
+      - updated_at
+      filter:
+        id:
+          _eq: X-Hasura-User-Id
+      check:
+        id:
+          _eq: X-Hasura-User-Id
+  delete_permissions:
+  - role: user
+    permission:
+      filter:
+        id:
+          _eq: X-Hasura-User-Id
