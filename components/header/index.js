@@ -27,7 +27,8 @@ const Header = ({ style }) => {
           grid-template:
             'logo link'
             / 1fr;
-          ${style?.backgroundColor === undefined &&
+          ${style.backgroundColor !==
+            Header.defaultProps.style.backgroundColor &&
           'box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);'}
         }
         .Logo {
@@ -59,7 +60,7 @@ Header.propTypes = {
 
 Header.defaultProps = {
   style: {
-    backgroundColor: 'auto',
+    backgroundColor: '#ffffff',
   },
 }
 

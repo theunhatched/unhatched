@@ -22,7 +22,7 @@ const Layout = ({ style, children }) => (
           'main' 1fr
           'foot' 30px
           / 1fr;
-        background-color: ${style?.backgroundColor};
+        background-color: ${style.backgroundColor};
       }
       .Content {
         margin: 10px auto;
@@ -55,7 +55,7 @@ Layout.propTypes = {
 
 Layout.defaultProps = {
   style: {
-    backgroundColor: undefined,
+    backgroundColor: '#ffffff',
   },
 }
 
