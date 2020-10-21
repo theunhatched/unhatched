@@ -6,7 +6,7 @@ function hasuraUpsert(user, context, callback) {
   const url = configuration.HASURA_GRAPHQL_URL;
   const query = `
 mutation($userId: String!, $nickname: String) {
-  insert_users_one(
+  insert_user_one(
 		object: {
       auth0_id: $userId,
       name: $nickname
@@ -32,12 +32,13 @@ mutation($userId: String!, $nickname: String) {
     }),
   };
   request.post(post, (error, response, body) => {
-    const uuid = JSON.parse(body).data.insert_users_one.id;
+    const uuid = JSON.parse(body).data.insert_user_one.id;
     context.accessToken["https://hasura.io/jwt/claims"] = {
       "x-hasura-default-role": "user",
       "x-hasura-allowed-roles": ["user"],
       "x-hasura-user-id": uuid,
     };
+    context.idToken.user = uuid;
     callback(null, user, context);
   });
 }
