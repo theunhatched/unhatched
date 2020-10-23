@@ -7,15 +7,13 @@ import { useFetchUser } from '../lib/user'
 const mutation = gql`
   mutation(
     $userId: uuid!
-    $profile: String!
     $hairColor: String!
     $eyeColor: String!
     $birthdate: date!
   ) {
-    insert_donors_one(
+    insert_disclosure_initial_one(
       object: {
         user_id: $userId
-        profile: $profile
         eye_color: $eyeColor
         hair_color: $hairColor
         birthdate: $birthdate
@@ -28,15 +26,14 @@ const mutation = gql`
 
 const query = gql`
   subscription {
-    donors {
-      id
+    disclosure_initial {
+      disclosure_id
       hair_color
       eye_color
       created_at
       birthdate
       user_id
       updated_at
-      profile
     }
   }
 `
@@ -47,7 +44,6 @@ const TestForm = () => {
   const [userIdInput, setUserId] = useState(
     '9bf03504-bedb-4fe9-832b-cce5c693458e'
   )
-  const [profileInput, setProfile] = useState('## My Profile')
   const [hairColorInput, setHairColor] = useState('Blonde')
   const [eyeColorInput, setEyeColor] = useState('Blue')
   const [birthdateInput, setBirthdate] = useState('1984-02-29')
@@ -93,7 +89,6 @@ const TestForm = () => {
           addDonor({
             variables: {
               userId: userIdInput,
-              profile: profileInput,
               hairColor: hairColorInput,
               eyeColor: eyeColorInput,
               birthdate: birthdateInput,
@@ -107,14 +102,6 @@ const TestForm = () => {
             name="userId"
             value={userIdInput}
             onChange={(e) => setUserId(e.target.value)}
-          />
-        </div>
-        <div>
-          <input
-            type="text"
-            name="profile"
-            value={profileInput}
-            onChange={(e) => setProfile(e.target.value)}
           />
         </div>
         <div>
