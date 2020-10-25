@@ -1,6 +1,5 @@
 import React from 'react'
 import Router from 'next/router'
-import TestNav from '../components/test-nav'
 
 import { withApollo } from '../lib/withApollo'
 import { useFetchUser } from '../lib/user'
@@ -12,7 +11,6 @@ const IndexPage = () => {
   }
   return (
     <div>
-      <TestNav />
       <button
         type="button"
         onClick={() => {

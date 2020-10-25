@@ -1,6 +1,5 @@
 import React from 'react'
 import { gql, useQuery } from '@apollo/client'
-import TestNav from '../components/test-nav'
 import { withApollo } from '../lib/withApollo'
 import { useFetchUser } from '../lib/user'
 
@@ -30,7 +29,6 @@ const Dashboard = () => {
 
   return (
     <>
-      <TestNav />
       <h1>Dashboard</h1>
       <pre>
         {`

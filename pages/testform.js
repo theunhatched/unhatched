@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { gql, useMutation, useSubscription } from '@apollo/client'
-import TestNav from '../components/test-nav'
 import { withApollo } from '../lib/withApollo'
 import { useFetchUser } from '../lib/user'
 
@@ -80,7 +79,6 @@ const TestForm = () => {
 
   return (
     <>
-      <TestNav />
       User: {JSON.stringify(user)}
       <h1>Form</h1>
       <form
