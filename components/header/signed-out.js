@@ -4,12 +4,12 @@ import NavItem from './nav-item'
 
 const SignedOut = () => (
   <NavList>
-    <NavItem href="/about-us">About Us</NavItem>
-    <NavItem href="/become-a-donor" cta>
+    <NavItem href="/about">About us</NavItem>
+    <NavItem href="/donor" cta>
       Become a Donor
     </NavItem>
-    <NavItem href="/api/login">Log In</NavItem>
-    <NavItem href="/api/login">Sign up for Free</NavItem>
+    <NavItem href="/api/login">Log in</NavItem>
+    <NavItem href="/api/signup">Sign up for free</NavItem>
   </NavList>
 )
 

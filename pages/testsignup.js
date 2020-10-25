@@ -1,11 +1,9 @@
 import React from 'react'
-import TestNav from '../components/test-nav'
 import { withApollo } from '../lib/withApollo'
 
 const TestSignup = () => {
   return (
     <>
-      <TestNav />
       <h1>Sign Up</h1>
       <form>
         <input type="text" placeholder="Email" />
