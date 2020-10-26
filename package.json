@@ -40,7 +40,7 @@
     "@babel/core": "7.12.3",
     "@babel/preset-env": "7.12.1",
     "@babel/preset-react": "7.12.1",
-    "@fullhuman/postcss-purgecss": "^3.0.0",
+    "@fullhuman/postcss-purgecss": "3.0.0",
     "@philihp/eslint-config": "4.1.0",
     "bdd-lazy-var": "2.5.4",
     "enzyme": "3.11.0",
@@ -51,8 +51,8 @@
     "jest-enzyme": "7.1.2",
     "jest-react-hooks-shallow": "1.4.1",
     "lint-staged": "10.4.2",
-    "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^1.9.6",
+    "postcss-preset-env": "6.7.0",
+    "tailwindcss": "1.9.6",
     "test-listen": "1.1.0"
   },
   "lint-staged": {
