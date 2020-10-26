@@ -1,8 +1,13 @@
-import App from 'next/app'
+// import App from 'next/app'
 import Router from 'next/router'
+import { pageview } from '../lib/gtag'
+import '../lib/tailwind.css'
 
-import * as gtag from '../lib/gtag'
+Router.events.on('routeChangeComplete', pageview)
 
-Router.events.on('routeChangeComplete', (url) => gtag.pageview(url))
+const App = ({ Component, pageProps }) => (
+  // eslint-disable-next-line react/react-in-jsx-scope
+  <Component {...pageProps} />
+)
 
 export default App
