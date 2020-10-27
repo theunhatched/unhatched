@@ -47,6 +47,14 @@ const Header = ({ style }) => {
           /* identical to box height */
           color: #0d1c66;
         }
+
+        a {
+          font-family: Oswald;
+          font-style: normal;
+          font-weight: normal;
+          color: inherit;
+          text-decoration: none;
+        }
       `}</style>
     </div>
   )

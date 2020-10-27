@@ -1,3 +1,5 @@
+const tailwindTypography = require('@tailwindcss/typography')
+
 module.exports = {
   future: {
     // removeDeprecatedGapUtilities: true,
@@ -8,5 +10,5 @@ module.exports = {
     extend: {},
   },
   variants: {},
-  plugins: [],
+  plugins: [tailwindTypography],
 }

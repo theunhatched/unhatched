@@ -9,7 +9,7 @@ const Layout = ({ style, children }) => (
     <div className="Layout">
       <Head />
       <Header style={style} />
-      <div className="Content">{children}</div>
+      <div className="Content prose">{children}</div>
       <Footer style={style} />
     </div>
     <style jsx>{`
@@ -34,13 +34,6 @@ const Layout = ({ style, children }) => (
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-      }
-      a {
-        font-family: Oswald;
-        font-style: normal;
-        font-weight: normal;
-        color: inherit;
-        text-decoration: none;
       }
     `}</style>
   </>
