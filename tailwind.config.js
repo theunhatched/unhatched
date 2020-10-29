@@ -1,12 +1,18 @@
+const tailwindTypography = require('@tailwindcss/typography')
+
 module.exports = {
   future: {
-    // removeDeprecatedGapUtilities: true,
-    // purgeLayersByDefault: true,
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
   },
-  purge: [],
+  purge: ['./components/**/*.{js,jsx}', './pages/**/*.{js,jsx}'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'accent-1': '#333',
+      },
+    },
   },
   variants: {},
-  plugins: [],
+  plugins: [tailwindTypography],
 }

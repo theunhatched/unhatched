@@ -1,7 +1,7 @@
 // import App from 'next/app'
 import Router from 'next/router'
 import { pageview } from '../lib/gtag'
-import '../lib/tailwind.css'
+import '../styles/index.css'
 
 Router.events.on('routeChangeComplete', pageview)
 

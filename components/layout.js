@@ -29,20 +29,6 @@ const Layout = ({ style, children }) => (
         width: 1200px;
       }
     `}</style>
-    <style jsx global>{`
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      a {
-        font-family: Oswald;
-        font-style: normal;
-        font-weight: normal;
-        color: inherit;
-        text-decoration: none;
-      }
-    `}</style>
   </>
 )
 

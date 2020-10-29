@@ -5,13 +5,19 @@ import cx from 'classnames'
 const Footer = ({ active }) => {
   return (
     <>
-      <ul>
-        <li className={cx({ active: active === 'basic' })}>Basic details</li>
-        <li className={cx({ active: active === 'profile' })}>
-          Your genetic profile
-        </li>
-        <li className={cx({ active: active === 'payout' })}>Payout info</li>
-      </ul>
+      [{' '}
+      <a href="/donor" className={cx({ active: active === 'basic' })}>
+        Basic details
+      </a>{' '}
+      |{' '}
+      <a href="/profile" className={cx({ active: active === 'profile' })}>
+        Your genetic profile
+      </a>{' '}
+      |{' '}
+      <a href="/payment" className={cx({ active: active === 'payout' })}>
+        Payout info
+      </a>{' '}
+      ]
       <style jsx>
         {`
           .active {

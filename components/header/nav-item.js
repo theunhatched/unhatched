@@ -17,18 +17,11 @@ const NavItem = ({ href, children, cta }) => (
         font-family: Oswald;
         font-style: normal;
         font-weight: normal;
-        font-size: 18px;
-        line-height: 27px;
-        /* identical to box height */
-        color: #0d1c66;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
       }
-      a {
-        font-family: Oswald;
-        font-style: normal;
-        font-weight: normal;
-        color: inherit;
-        text-decoration: none;
-      }
+      
       .NavItem.CTA {
         box-sizing: boder-box;
         border-radius: 4px;*/

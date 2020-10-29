@@ -37,14 +37,8 @@ const Header = ({ style }) => {
           font-family: Playfair Display;
           font-style: normal;
           font-weight: 900;
-          font-size: 25px;
-          color: #0d1c66;
-          font-family: Playfair Display;
-          font-style: normal;
-          font-weight: 900;
           font-size: 30px;
           line-height: 40px;
-          /* identical to box height */
           color: #0d1c66;
         }
       `}</style>
