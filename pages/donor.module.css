@@ -1,13 +1,12 @@
 .form {
-  @apply w-full max-w-lg;
 }
 
 .row {
-  @apply flex flex-wrap -mx-3 mb-6;
+  @apply flex items-center -mx-3 mb-6;
 }
 
 .label {
-  @apply block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2;
+  @apply block tracking-wide text-gray-700 text-sm mb-2;
 }
 
 .input {

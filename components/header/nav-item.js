@@ -4,8 +4,10 @@ import Link from 'next/link'
 import cx from 'classnames'
 
 const NavItem = ({ href, children, cta }) => (
-  <li className={cx({ NavItem: true, CTA: cta })}>
-    <Link href={href}>{children}</Link>
+  <li className={cx('mt-6', { CTA: cta })}>
+    <Link href={href}>
+      <a className="NavItem">{children}</a>
+    </Link>
     <style jsx>{`
       .NavItem {
         font-size: 16px;
