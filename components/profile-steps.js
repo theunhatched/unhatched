@@ -1,22 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import Link from 'next/link'
 
 const Footer = ({ active }) => {
   return (
     <>
       [{' '}
-      <a href="/donor" className={cx({ active: active === 'basic' })}>
+      <Link href="/donor" className={cx({ active: active === 'basic' })}>
         Basic details
-      </a>{' '}
+      </Link>{' '}
       |{' '}
-      <a href="/profile" className={cx({ active: active === 'profile' })}>
+      <Link href="/profile" className={cx({ active: active === 'profile' })}>
         Your genetic profile
-      </a>{' '}
+      </Link>{' '}
       |{' '}
-      <a href="/payment" className={cx({ active: active === 'payout' })}>
+      <Link href="/payment" className={cx({ active: active === 'payout' })}>
         Payout info
-      </a>{' '}
+      </Link>{' '}
       ]
       <style jsx>
         {`

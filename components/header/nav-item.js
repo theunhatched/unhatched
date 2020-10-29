@@ -5,9 +5,7 @@ import cx from 'classnames'
 
 const NavItem = ({ href, children, cta }) => (
   <li className={cx({ NavItem: true, CTA: cta })}>
-    <Link href={href}>
-      <a>{children}</a>
-    </Link>
+    <Link href={href}>{children}</Link>
     <style jsx>{`
       .NavItem {
         font-size: 16px;

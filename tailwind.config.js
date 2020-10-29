@@ -7,6 +7,9 @@ module.exports = {
   },
   purge: ['./components/**/*.{js,jsx}', './pages/**/*.{js,jsx}'],
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       colors: {
         'accent-1': '#333',
