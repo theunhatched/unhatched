@@ -5,7 +5,7 @@ import { useFetchUser } from '../lib/user'
 
 const QUERY = gql`
   {
-    users {
+    user {
       name
       id
     }
