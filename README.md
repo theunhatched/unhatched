@@ -1,4 +1,5 @@
-[![Coverage Status](https://coveralls.io/repos/github/theunhatched/unhatched/badge.svg?branch=master)](https://coveralls.io/github/theunhatched/unhatched?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/theunhatched/unhatched/badge.svg?branch=main)](https://coveralls.io/github/theunhatched/unhatched?branch=main)
+
 
 ## Setup
 
