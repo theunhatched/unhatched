@@ -53,3 +53,4 @@ To learn more about Next.js, take a look at the following resources:
 ## Deploying Changes
 
 Changes merged into master will automatically deploy, and Github will protect you from accidentally pushing to it. To get changes into master, create a pull request.
+.
