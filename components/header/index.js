@@ -10,10 +10,10 @@ const Header = ({ style }) => {
   const { user, loading } = useFetchUser()
   return (
     <div className="Header">
-      <h1>
+      <h1 className="flex items-center">
         <div className="Logo">
           <Link href="/">
-            <a>unhatched</a>
+            <a className="mt-6">unhatched</a>
           </Link>
         </div>
       </h1>
@@ -33,6 +33,8 @@ const Header = ({ style }) => {
         }
         .Logo {
           grid-area: foot;
+        }
+        a {
           padding: 22px 0 22px 40px;
           font-family: Playfair Display;
           font-style: normal;

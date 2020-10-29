@@ -1,4 +1,5 @@
 const tailwindTypography = require('@tailwindcss/typography')
+const tailwindCustomForms = require('@tailwindcss/custom-forms')
 
 module.exports = {
   future: {
@@ -21,5 +22,5 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [tailwindTypography],
+  plugins: [tailwindTypography, tailwindCustomForms],
 }
