@@ -6,11 +6,16 @@ export default function Home() {
   return (
     <HeroLayout>
       <div className={style.h1}>
-        We&rsquo;re a women–first fertility service.
+        We&rsquo;re a women–first
+        <br />
+        fertility service.
       </div>
       <div className={style.p}>
         We&rsquo;re run by WoMen for women. We educate, prioritize, and match
-        egg donors and potential families in a totally transparent, step-by-step
+        egg
+        <br />
+        donors and potential families in a totally transparent, step-by-step
+        <br />
         process.
       </div>
       <button type="button">Got eggs?</button>
