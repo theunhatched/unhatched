@@ -7,7 +7,7 @@ const Profile = () => {
       <form action="#" method="POST">
         <h1>Sign up</h1>
         <p>Sign up for an account to begin your matching process</p>
-        <h2>What&lsquo;s your primary goal?</h2>
+        <h2>What&rsquo;s your primary goal?</h2>
         <label htmlFor="sponsor">
           Sponsor
           <input type="radio" name="intent" id="sponsor" value="sponsor" />

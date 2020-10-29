@@ -9,7 +9,7 @@ const Profile = () => {
         <ProfileSteps active="profile" />
         <h1>Provide your genetic profile</h1>
         <p>
-          To match you with the right parties, we&lsquo;ll need to know more
+          To match you with the right parties, we&rsquo;ll need to know more
           about your genetic profile, such as your height, eye color, medical
           history, and any hereditary diseases you might have.
         </p>

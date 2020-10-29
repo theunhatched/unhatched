@@ -9,7 +9,7 @@ const Layout = ({ style, children }) => (
     <div className="Layout">
       <Head />
       <Header style={style} />
-      <div className="Content prose">{children}</div>
+      <div className="Content">{children}</div>
       <Footer style={style} />
     </div>
     <style jsx>{`
@@ -27,13 +27,6 @@ const Layout = ({ style, children }) => (
       .Content {
         margin: 10px auto;
         width: 1200px;
-      }
-    `}</style>
-    <style jsx global>{`
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
       }
     `}</style>
   </>
