@@ -2,15 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Head from './head'
 import Header from './header'
-import Footer from './footer'
+// import Footer from './footer'
 
 const Layout = ({ style, children }) => (
   <>
     <div className="Layout">
       <Head />
       <Header style={style} />
-      <main>{children}</main>
-      <Footer style={style} />
+      <main className="container mx-auto pt-8">{children}</main>
+      {/* <Footer style={style} /> */}
     </div>
     <style jsx>{`
       .Layout {
