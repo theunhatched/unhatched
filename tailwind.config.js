@@ -10,6 +10,9 @@ module.exports = {
     extend: {
       colors: {
         'accent-1': '#333',
+        arapawa: '#0d1c66',
+        pink: '#f0a3a1',
+        ballerina: '#ffd7d7',
       },
     },
   },

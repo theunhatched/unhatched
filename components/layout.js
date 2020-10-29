@@ -9,7 +9,7 @@ const Layout = ({ style, children }) => (
     <div className="Layout">
       <Head />
       <Header style={style} />
-      <div className="Content">{children}</div>
+      <main>{children}</main>
       <Footer style={style} />
     </div>
     <style jsx>{`
@@ -23,10 +23,6 @@ const Layout = ({ style, children }) => (
           'foot' 30px
           / 1fr;
         background-color: ${style.backgroundColor};
-      }
-      .Content {
-        margin: 10px auto;
-        width: 1200px;
       }
     `}</style>
   </>
