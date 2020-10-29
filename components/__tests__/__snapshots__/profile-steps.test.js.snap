@@ -1,0 +1,385 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfileSteps basic steps 1`] = `
+<ProfileSteps
+  active="basic"
+>
+  <div
+    className="flex flex-row"
+  >
+    <Step
+      active={true}
+      href="/donor"
+      n={1}
+    >
+      <Marker
+        active={true}
+      >
+        <div
+          className="border-2 border-carnation text-carnation font-extrabold text-xl rounded-full h-12 w-12 flex items-center justify-center"
+        >
+          1
+        </div>
+      </Marker>
+      <div
+        className="h-12 px-3 flex items-center justify-center active"
+      >
+        <Link
+          href="/donor"
+        >
+          <a
+            className="text-black"
+            href="/donor"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            Basic details
+          </a>
+        </Link>
+      </div>
+    </Step>
+    <Bar>
+      <div
+        className="jsx-3646565487 h-12 px-3 flex items-center justify-center"
+      >
+        <hr
+          className="jsx-3646565487"
+        />
+      </div>
+      <JSXStyle
+        id="3646565487"
+      />
+    </Bar>
+    <Step
+      active={false}
+      href="/profile"
+      n={2}
+    >
+      <Marker
+        active={false}
+      >
+        <div
+          className="bg-ballerina text-white text-xl rounded-full h-12 w-12 flex items-center justify-center"
+        >
+          2
+        </div>
+      </Marker>
+      <div
+        className="h-12 px-3 flex items-center justify-center active"
+      >
+        <Link
+          href="/profile"
+        >
+          <a
+            className="text-opacity-50 text-black"
+            href="/profile"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            Your genetic profile
+          </a>
+        </Link>
+      </div>
+    </Step>
+    <Bar>
+      <div
+        className="jsx-3646565487 h-12 px-3 flex items-center justify-center"
+      >
+        <hr
+          className="jsx-3646565487"
+        />
+      </div>
+      <JSXStyle
+        id="3646565487"
+      />
+    </Bar>
+    <Step
+      active={false}
+      href="/payment"
+      n={3}
+    >
+      <Marker
+        active={false}
+      >
+        <div
+          className="bg-ballerina text-white text-xl rounded-full h-12 w-12 flex items-center justify-center"
+        >
+          3
+        </div>
+      </Marker>
+      <div
+        className="h-12 px-3 flex items-center justify-center active"
+      >
+        <Link
+          href="/payment"
+        >
+          <a
+            className="text-opacity-50 text-black"
+            href="/payment"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            Payout info
+          </a>
+        </Link>
+      </div>
+    </Step>
+  </div>
+</ProfileSteps>
+`;
+
+exports[`ProfileSteps payout steps 1`] = `
+<ProfileSteps
+  active="payout"
+>
+  <div
+    className="flex flex-row"
+  >
+    <Step
+      active={false}
+      href="/donor"
+      n={1}
+    >
+      <Marker
+        active={false}
+      >
+        <div
+          className="bg-ballerina text-white text-xl rounded-full h-12 w-12 flex items-center justify-center"
+        >
+          1
+        </div>
+      </Marker>
+      <div
+        className="h-12 px-3 flex items-center justify-center active"
+      >
+        <Link
+          href="/donor"
+        >
+          <a
+            className="text-opacity-50 text-black"
+            href="/donor"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            Basic details
+          </a>
+        </Link>
+      </div>
+    </Step>
+    <Bar>
+      <div
+        className="jsx-3646565487 h-12 px-3 flex items-center justify-center"
+      >
+        <hr
+          className="jsx-3646565487"
+        />
+      </div>
+      <JSXStyle
+        id="3646565487"
+      />
+    </Bar>
+    <Step
+      active={false}
+      href="/profile"
+      n={2}
+    >
+      <Marker
+        active={false}
+      >
+        <div
+          className="bg-ballerina text-white text-xl rounded-full h-12 w-12 flex items-center justify-center"
+        >
+          2
+        </div>
+      </Marker>
+      <div
+        className="h-12 px-3 flex items-center justify-center active"
+      >
+        <Link
+          href="/profile"
+        >
+          <a
+            className="text-opacity-50 text-black"
+            href="/profile"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            Your genetic profile
+          </a>
+        </Link>
+      </div>
+    </Step>
+    <Bar>
+      <div
+        className="jsx-3646565487 h-12 px-3 flex items-center justify-center"
+      >
+        <hr
+          className="jsx-3646565487"
+        />
+      </div>
+      <JSXStyle
+        id="3646565487"
+      />
+    </Bar>
+    <Step
+      active={false}
+      href="/payment"
+      n={3}
+    >
+      <Marker
+        active={false}
+      >
+        <div
+          className="bg-ballerina text-white text-xl rounded-full h-12 w-12 flex items-center justify-center"
+        >
+          3
+        </div>
+      </Marker>
+      <div
+        className="h-12 px-3 flex items-center justify-center active"
+      >
+        <Link
+          href="/payment"
+        >
+          <a
+            className="text-opacity-50 text-black"
+            href="/payment"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            Payout info
+          </a>
+        </Link>
+      </div>
+    </Step>
+  </div>
+</ProfileSteps>
+`;
+
+exports[`ProfileSteps profile steps 1`] = `
+<ProfileSteps
+  active="profile"
+>
+  <div
+    className="flex flex-row"
+  >
+    <Step
+      active={false}
+      href="/donor"
+      n={1}
+    >
+      <Marker
+        active={false}
+      >
+        <div
+          className="bg-ballerina text-white text-xl rounded-full h-12 w-12 flex items-center justify-center"
+        >
+          1
+        </div>
+      </Marker>
+      <div
+        className="h-12 px-3 flex items-center justify-center active"
+      >
+        <Link
+          href="/donor"
+        >
+          <a
+            className="text-opacity-50 text-black"
+            href="/donor"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            Basic details
+          </a>
+        </Link>
+      </div>
+    </Step>
+    <Bar>
+      <div
+        className="jsx-3646565487 h-12 px-3 flex items-center justify-center"
+      >
+        <hr
+          className="jsx-3646565487"
+        />
+      </div>
+      <JSXStyle
+        id="3646565487"
+      />
+    </Bar>
+    <Step
+      active={true}
+      href="/profile"
+      n={2}
+    >
+      <Marker
+        active={true}
+      >
+        <div
+          className="border-2 border-carnation text-carnation font-extrabold text-xl rounded-full h-12 w-12 flex items-center justify-center"
+        >
+          2
+        </div>
+      </Marker>
+      <div
+        className="h-12 px-3 flex items-center justify-center active"
+      >
+        <Link
+          href="/profile"
+        >
+          <a
+            className="text-black"
+            href="/profile"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            Your genetic profile
+          </a>
+        </Link>
+      </div>
+    </Step>
+    <Bar>
+      <div
+        className="jsx-3646565487 h-12 px-3 flex items-center justify-center"
+      >
+        <hr
+          className="jsx-3646565487"
+        />
+      </div>
+      <JSXStyle
+        id="3646565487"
+      />
+    </Bar>
+    <Step
+      active={false}
+      href="/payment"
+      n={3}
+    >
+      <Marker
+        active={false}
+      >
+        <div
+          className="bg-ballerina text-white text-xl rounded-full h-12 w-12 flex items-center justify-center"
+        >
+          3
+        </div>
+      </Marker>
+      <div
+        className="h-12 px-3 flex items-center justify-center active"
+      >
+        <Link
+          href="/payment"
+        >
+          <a
+            className="text-opacity-50 text-black"
+            href="/payment"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            Payout info
+          </a>
+        </Link>
+      </div>
+    </Step>
+  </div>
+</ProfileSteps>
+`;

@@ -16,6 +16,7 @@ module.exports = {
         arapawa: '#0d1c66',
         pink: '#f0a3a1',
         ballerina: '#ffd7d7',
+        carnation: '#f95b5d',
       },
     },
   },

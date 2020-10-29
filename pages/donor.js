@@ -1,18 +1,18 @@
 import React from 'react'
 import Layout from '../components/layout'
 import ProfileSteps from '../components/profile-steps'
+import NameDrop from '../components/name-drop'
 import style from './donor.module.css'
 
 const Donor = () => {
-  const name = 'Lydia'
-
   return (
     <Layout>
       <ProfileSteps active="basic" />
       <h1>Complete your donor profile</h1>
       <p>
-        Welcome, {name}! Welcome, Lydia! Before we can start matching you with
-        the right potential parties, we&rsquo;ll need to know more about you.
+        <NameDrop prefix="Welcome, " suffix="! " />
+        Before we can start matching you with the right potential parties,
+        we&rsquo;ll need to know more about you.
       </p>
       <p>
         <a href="/">Looking for donors instead?</a>
