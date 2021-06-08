@@ -35,7 +35,7 @@
     "prop-types": "15.7.2",
     "react": "16.14.0",
     "react-dom": "16.14.0",
-    "subscriptions-transport-ws": "0.9.18"
+    "subscriptions-transport-ws": "0.9.19"
   },
   "devDependencies": {
     "@babel/cli": "7.14.3",
